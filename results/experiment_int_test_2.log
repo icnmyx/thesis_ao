@@ -1,0 +1,1231 @@
+Model2(
+  (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout1): Dropout(p=0.1, inplace=False)
+  (fc1): Linear(in_features=16384, out_features=1, bias=True)
+  (fc2): Linear(in_features=256, out_features=1, bias=True)
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+Epoch [1/300] - 0.9605/0.0420/0.9610/0.0420
+Best Result: Epoch [1/300] - Val Loss: 0.0420, Val Error: 0.0420
+Epoch [2/300] - 0.0240/0.0078/0.0240/0.0078
+Best Result: Epoch [2/300] - Val Loss: 0.0078, Val Error: 0.0078
+Epoch [3/300] - 0.0076/0.0052/0.0076/0.0052
+Best Result: Epoch [3/300] - Val Loss: 0.0052, Val Error: 0.0052
+Epoch [4/300] - 0.0055/0.0051/0.0055/0.0051
+Best Result: Epoch [4/300] - Val Loss: 0.0051, Val Error: 0.0051
+Epoch [5/300] - 0.0056/0.0061/0.0056/0.0061
+Best Result: Epoch [4/300] - Val Loss: 0.0051, Val Error: 0.0051
+Epoch [6/300] - 0.0048/0.0043/0.0048/0.0043
+Best Result: Epoch [6/300] - Val Loss: 0.0043, Val Error: 0.0043
+Epoch [7/300] - 0.0046/0.0038/0.0046/0.0038
+Best Result: Epoch [7/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [8/300] - 0.0061/0.0043/0.0061/0.0043
+Best Result: Epoch [7/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [9/300] - 0.0041/0.1772/0.0041/0.1773
+Best Result: Epoch [7/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [10/300] - 0.0080/0.0036/0.0080/0.0036
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [11/300] - 0.1052/0.1334/0.1052/0.1334
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [12/300] - 0.0165/0.0074/0.0165/0.0075
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [13/300] - 0.0071/0.0084/0.0071/0.0084
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [14/300] - 0.0079/0.0047/0.0079/0.0047
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [15/300] - 0.0053/0.0043/0.0053/0.0043
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [16/300] - 0.0097/0.0040/0.0097/0.0040
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [17/300] - 0.0047/0.0052/0.0047/0.0052
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [18/300] - 0.0050/0.0056/0.0050/0.0056
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [19/300] - 0.0159/0.0038/0.0159/0.0038
+Best Result: Epoch [10/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [20/300] - 0.0039/0.0036/0.0039/0.0036
+Best Result: Epoch [20/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [21/300] - 0.0040/0.0050/0.0040/0.0050
+Best Result: Epoch [20/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [22/300] - 0.0151/0.0040/0.0151/0.0040
+Best Result: Epoch [20/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [23/300] - 0.0036/0.0037/0.0036/0.0037
+Best Result: Epoch [20/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [24/300] - 0.0039/0.0037/0.0039/0.0037
+Best Result: Epoch [20/300] - Val Loss: 0.0036, Val Error: 0.0036
+Epoch [25/300] - 0.0202/0.0035/0.0202/0.0035
+Best Result: Epoch [25/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [26/300] - 0.0034/0.0048/0.0034/0.0048
+Best Result: Epoch [25/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [27/300] - 0.0037/0.0041/0.0037/0.0041
+Best Result: Epoch [25/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [28/300] - 0.0164/0.0104/0.0164/0.0104
+Best Result: Epoch [25/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [29/300] - 0.0034/0.0030/0.0034/0.0030
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [30/300] - 0.0033/0.0032/0.0033/0.0032
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [31/300] - 0.0231/0.0036/0.0232/0.0036
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [32/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [33/300] - 0.0031/0.0036/0.0031/0.0036
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [34/300] - 0.0035/0.0033/0.0035/0.0033
+Best Result: Epoch [29/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [35/300] - 0.0204/0.0029/0.0204/0.0029
+Best Result: Epoch [35/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [36/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [36/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [37/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [36/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [38/300] - 0.0159/0.0028/0.0159/0.0028
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [39/300] - 0.0029/0.0031/0.0029/0.0031
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [40/300] - 0.0136/0.0030/0.0136/0.0029
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [41/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [42/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [43/300] - 0.0151/0.0032/0.0151/0.0032
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [44/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [45/300] - 0.0035/0.0030/0.0035/0.0030
+Best Result: Epoch [38/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [46/300] - 0.0347/0.0027/0.0348/0.0027
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [47/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [48/300] - 0.0028/0.0027/0.0028/0.0027
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [49/300] - 0.0030/0.0027/0.0030/0.0027
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [50/300] - 0.0332/0.0029/0.0332/0.0029
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [51/300] - 0.0027/0.0028/0.0027/0.0028
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [52/300] - 0.0029/0.0027/0.0029/0.0027
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [53/300] - 0.0426/0.0045/0.0426/0.0045
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [54/300] - 0.0031/0.0028/0.0031/0.0028
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [55/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [56/300] - 0.0029/0.0039/0.0029/0.0039
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [57/300] - 0.0181/0.5691/0.0179/0.5691
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [58/300] - 0.0132/0.0031/0.0132/0.0031
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [59/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [60/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [61/300] - 0.0268/0.0028/0.0268/0.0028
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [62/300] - 0.0027/0.0027/0.0027/0.0027
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [63/300] - 0.0028/0.0031/0.0028/0.0031
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [64/300] - 0.0138/0.0030/0.0138/0.0030
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [65/300] - 0.0027/0.0028/0.0027/0.0028
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [66/300] - 0.0028/0.0036/0.0028/0.0036
+Best Result: Epoch [46/300] - Val Loss: 0.0027, Val Error: 0.0027
+Epoch [67/300] - 0.0265/0.0026/0.0265/0.0026
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [68/300] - 0.0027/0.0027/0.0027/0.0027
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [69/300] - 0.0028/0.0027/0.0028/0.0027
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [70/300] - 0.0251/0.0028/0.0251/0.0029
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [71/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [72/300] - 0.0027/0.0030/0.0027/0.0030
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [73/300] - 0.0031/0.0055/0.0031/0.0055
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [74/300] - 0.0374/0.0027/0.0375/0.0027
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [75/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [67/300] - Val Loss: 0.0026, Val Error: 0.0026
+Epoch [76/300] - 0.0027/0.0025/0.0027/0.0025
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [77/300] - 0.0028/0.0101/0.0028/0.0101
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [78/300] - 0.0235/0.0027/0.0235/0.0027
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [79/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [80/300] - 0.0028/0.0061/0.0028/0.0061
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [81/300] - 0.0396/0.0027/0.0396/0.0027
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [82/300] - 0.0026/0.0025/0.0026/0.0025
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [83/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [76/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [84/300] - 0.0027/0.0025/0.0027/0.0025
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [85/300] - 0.0072/0.0029/0.0072/0.0029
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [86/300] - 0.0194/0.0028/0.0194/0.0028
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [87/300] - 0.0026/0.0032/0.0026/0.0032
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [88/300] - 0.0027/0.0029/0.0027/0.0029
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [89/300] - 0.0032/0.0031/0.0032/0.0032
+Best Result: Epoch [84/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [90/300] - 0.0443/0.0025/0.0443/0.0025
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [91/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [92/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [93/300] - 0.0028/0.0049/0.0028/0.0049
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [94/300] - 0.0193/0.0027/0.0193/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [95/300] - 0.0027/0.0027/0.0027/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [96/300] - 0.0028/0.0026/0.0028/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [97/300] - 0.0225/0.0028/0.0226/0.0028
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [98/300] - 0.0026/0.0028/0.0026/0.0028
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [99/300] - 0.0027/0.0030/0.0027/0.0030
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [100/300] - 0.0212/0.0028/0.0212/0.0028
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [101/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [102/300] - 0.0028/0.0032/0.0028/0.0032
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [103/300] - 0.0165/0.0026/0.0165/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [104/300] - 0.0027/0.0030/0.0027/0.0030
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [105/300] - 0.0028/0.0084/0.0028/0.0084
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [106/300] - 0.0257/0.0026/0.0257/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [107/300] - 0.0026/0.0025/0.0026/0.0025
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [108/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [109/300] - 0.0185/0.0026/0.0185/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [110/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [111/300] - 0.0027/0.0027/0.0027/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [112/300] - 0.0364/0.0027/0.0364/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [113/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [114/300] - 0.0027/0.0029/0.0027/0.0029
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [115/300] - 0.0028/0.0026/0.0028/0.0026
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [116/300] - 0.0201/0.0027/0.0201/0.0027
+Best Result: Epoch [90/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [117/300] - 0.0026/0.0025/0.0026/0.0025
+Best Result: Epoch [117/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [118/300] - 0.0027/0.0026/0.0027/0.0026
+Best Result: Epoch [117/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [119/300] - 0.0331/0.0025/0.0331/0.0025
+Best Result: Epoch [117/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [120/300] - 0.0025/0.0036/0.0025/0.0036
+Best Result: Epoch [117/300] - Val Loss: 0.0025, Val Error: 0.0025
+Epoch [121/300] - 0.0026/0.0024/0.0026/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [122/300] - 0.0027/0.0029/0.0027/0.0029
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [123/300] - 0.0379/0.0025/0.0379/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [124/300] - 0.0026/0.0029/0.0026/0.0029
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [125/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [126/300] - 0.0319/0.0400/0.0319/0.0400
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [127/300] - 0.0032/0.0033/0.0032/0.0033
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [128/300] - 0.0025/0.0027/0.0025/0.0027
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [129/300] - 0.0027/0.0028/0.0027/0.0028
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [130/300] - 0.0341/0.0027/0.0342/0.0027
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [131/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [132/300] - 0.0026/0.0025/0.0026/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [133/300] - 0.0028/0.0033/0.0028/0.0033
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [134/300] - 0.0208/0.0024/0.0208/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [135/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [136/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [137/300] - 0.0131/0.0025/0.0131/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [138/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [139/300] - 0.0028/0.0033/0.0028/0.0033
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [140/300] - 0.0193/0.0024/0.0193/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [141/300] - 0.0025/0.0031/0.0025/0.0031
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [142/300] - 0.0026/0.0029/0.0026/0.0029
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [143/300] - 0.0166/0.0031/0.0166/0.0031
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [144/300] - 0.0026/0.0028/0.0026/0.0028
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [145/300] - 0.0026/0.0061/0.0026/0.0061
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [146/300] - 0.0112/0.0028/0.0112/0.0028
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [147/300] - 0.0026/0.0025/0.0026/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [148/300] - 0.0215/0.0024/0.0216/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [149/300] - 0.0025/0.0027/0.0025/0.0027
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [150/300] - 0.0027/0.0028/0.0027/0.0028
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [151/300] - 0.0196/0.0025/0.0196/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [152/300] - 0.0025/0.0026/0.0025/0.0026
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [153/300] - 0.0026/0.0030/0.0026/0.0030
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [154/300] - 0.0164/0.0025/0.0164/0.0025
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [155/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [156/300] - 0.0027/0.0028/0.0027/0.0028
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [157/300] - 0.0207/0.0024/0.0207/0.0024
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [158/300] - 0.0025/0.0029/0.0025/0.0029
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [159/300] - 0.0342/0.0030/0.0342/0.0030
+Best Result: Epoch [121/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [160/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [161/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [162/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [163/300] - 0.0259/0.0027/0.0260/0.0027
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [164/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [165/300] - 0.0025/0.0027/0.0025/0.0027
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [166/300] - 0.0027/0.0026/0.0027/0.0026
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [167/300] - 0.0425/0.0033/0.0425/0.0033
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [168/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [169/300] - 0.0025/0.0030/0.0025/0.0030
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [170/300] - 0.0026/0.0030/0.0026/0.0030
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [171/300] - 0.0164/0.0027/0.0164/0.0027
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [172/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [173/300] - 0.0026/0.0026/0.0026/0.0026
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [174/300] - 0.0126/0.0025/0.0126/0.0025
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [175/300] - 0.0025/0.0039/0.0025/0.0039
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [176/300] - 0.0034/0.0184/0.0033/0.0184
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [177/300] - 0.0174/0.0028/0.0174/0.0028
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [178/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [179/300] - 0.0365/0.0030/0.0365/0.0030
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [180/300] - 0.0024/0.0027/0.0024/0.0027
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [181/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [182/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [160/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [183/300] - 0.0182/0.0024/0.0182/0.0024
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [184/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [185/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [186/300] - 0.0183/0.0027/0.0183/0.0027
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [187/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [188/300] - 0.0025/0.0028/0.0025/0.0028
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [189/300] - 0.0317/0.0026/0.0317/0.0026
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [190/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [191/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [192/300] - 0.0026/0.0024/0.0026/0.0024
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [193/300] - 0.0195/0.0024/0.0195/0.0024
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [194/300] - 0.0024/0.0027/0.0024/0.0027
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [195/300] - 0.0025/0.0026/0.0025/0.0026
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [196/300] - 0.0244/0.0026/0.0244/0.0026
+Best Result: Epoch [183/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [197/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [197/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [198/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [197/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [199/300] - 0.0211/0.5186/0.0209/0.5186
+Best Result: Epoch [197/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [200/300] - 0.0130/0.0024/0.0130/0.0024
+Best Result: Epoch [197/300] - Val Loss: 0.0024, Val Error: 0.0024
+Epoch [201/300] - 0.0024/0.0023/0.0024/0.0023
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [202/300] - 0.0025/0.0029/0.0025/0.0029
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [203/300] - 0.0533/0.0026/0.0533/0.0026
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [204/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [205/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [206/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [207/300] - 0.0372/0.0034/0.0372/0.0034
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [208/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [209/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [210/300] - 0.0027/0.0032/0.0027/0.0032
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [211/300] - 0.0248/0.0024/0.0249/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [212/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [213/300] - 0.0025/0.0029/0.0025/0.0029
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [214/300] - 0.0151/0.0036/0.0151/0.0036
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [215/300] - 0.0025/0.0028/0.0025/0.0028
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [216/300] - 0.0026/0.0032/0.0026/0.0032
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [217/300] - 0.0131/0.0024/0.0131/0.0024
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [218/300] - 0.0024/0.0028/0.0024/0.0028
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [219/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [201/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [220/300] - 0.0311/0.0023/0.0311/0.0023
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [221/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [222/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [223/300] - 0.0032/0.0384/0.0032/0.0384
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [224/300] - 0.0267/0.0024/0.0267/0.0024
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [225/300] - 0.0024/0.0025/0.0024/0.0025
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [226/300] - 0.0025/0.0027/0.0025/0.0027
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [227/300] - 0.0362/0.0023/0.0362/0.0023
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [228/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [229/300] - 0.0023/0.0025/0.0023/0.0025
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [230/300] - 0.0025/0.0031/0.0025/0.0031
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [231/300] - 0.0316/0.0023/0.0316/0.0023
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [232/300] - 0.0023/0.0026/0.0023/0.0026
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [233/300] - 0.0024/0.0030/0.0024/0.0030
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [234/300] - 0.0149/0.1715/0.0148/0.1715
+Best Result: Epoch [220/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [235/300] - 0.0160/0.0023/0.0160/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [236/300] - 0.0024/0.0033/0.0024/0.0033
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [237/300] - 0.0025/0.0027/0.0025/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [238/300] - 0.0179/0.0029/0.0179/0.0029
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [239/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [240/300] - 0.0026/0.0027/0.0026/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [241/300] - 0.0434/0.0023/0.0434/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [242/300] - 0.0023/0.0027/0.0023/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [243/300] - 0.0023/0.0025/0.0023/0.0025
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [244/300] - 0.0024/0.0026/0.0024/0.0026
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [245/300] - 0.0344/0.0027/0.0344/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [246/300] - 0.0024/0.0023/0.0024/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [247/300] - 0.0024/0.0023/0.0024/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [248/300] - 0.0025/0.0025/0.0025/0.0025
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [249/300] - 0.0195/0.0025/0.0195/0.0025
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [250/300] - 0.0023/0.0026/0.0023/0.0026
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [251/300] - 0.0024/0.0027/0.0024/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [252/300] - 0.0537/0.0024/0.0537/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [253/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [254/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [255/300] - 0.0024/0.0034/0.0024/0.0034
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [256/300] - 0.0035/0.0027/0.0035/0.0027
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [257/300] - 0.0120/0.0025/0.0120/0.0025
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [258/300] - 0.0024/0.0031/0.0024/0.0031
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [259/300] - 0.0304/0.0024/0.0304/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [260/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [261/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [262/300] - 0.0025/0.0029/0.0025/0.0029
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [263/300] - 0.0211/0.0023/0.0211/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [264/300] - 0.0023/0.0028/0.0023/0.0028
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [265/300] - 0.0024/0.0029/0.0024/0.0029
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [266/300] - 0.0282/0.0023/0.0282/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [267/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [268/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [269/300] - 0.0135/0.0025/0.0135/0.0025
+Best Result: Epoch [235/300] - Val Loss: 0.0023, Val Error: 0.0023
+Epoch [270/300] - 0.0024/0.0022/0.0024/0.0022
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [271/300] - 0.0025/0.0023/0.0025/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [272/300] - 0.0301/0.0023/0.0301/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [273/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [274/300] - 0.0024/0.0026/0.0024/0.0026
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [275/300] - 0.0132/0.0026/0.0132/0.0026
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [276/300] - 0.0023/0.0027/0.0023/0.0027
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [277/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [278/300] - 0.0096/0.0026/0.0096/0.0026
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [279/300] - 0.0024/0.0023/0.0024/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [280/300] - 0.0772/0.0054/0.0772/0.0054
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [281/300] - 0.0048/0.0032/0.0048/0.0032
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [282/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [283/300] - 0.0030/0.0028/0.0030/0.0028
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [284/300] - 0.0363/0.0024/0.0363/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [285/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [286/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [287/300] - 0.0027/0.0027/0.0027/0.0027
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [288/300] - 0.0177/0.0023/0.0177/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [289/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [290/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [291/300] - 0.0454/0.0025/0.0454/0.0025
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [292/300] - 0.0025/0.0024/0.0025/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [293/300] - 0.0024/0.0024/0.0024/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [294/300] - 0.0024/0.0064/0.0024/0.0064
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [295/300] - 0.0378/0.0023/0.0378/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [296/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [297/300] - 0.0023/0.0023/0.0023/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [298/300] - 0.0024/0.0030/0.0024/0.0030
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [299/300] - 0.0212/0.0023/0.0212/0.0023
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Epoch [300/300] - 0.0023/0.0024/0.0023/0.0024
+Best Result: Epoch [270/300] - Val Loss: 0.0022, Val Error: 0.0022
+Finished Training
+Average error with expected test values: 0.002399524673819542
+Model(
+  (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv4): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv6): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout1): Dropout(p=0.1, inplace=False)
+  (fc1): Linear(in_features=32768, out_features=1, bias=True)
+  (fc2): Linear(in_features=256, out_features=1, bias=True)
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+Epoch [1/300] - 1.5276/0.2272/1.5281/0.2275
+Best Result: Epoch [1/300] - Val Loss: 0.2272, Val Error: 0.2275
+Epoch [2/300] - 0.1090/0.0144/0.1091/0.0144
+Best Result: Epoch [2/300] - Val Loss: 0.0144, Val Error: 0.0144
+Epoch [3/300] - 0.0084/0.0064/0.0084/0.0064
+Best Result: Epoch [3/300] - Val Loss: 0.0064, Val Error: 0.0064
+Epoch [4/300] - 0.0071/0.0062/0.0071/0.0062
+Best Result: Epoch [4/300] - Val Loss: 0.0062, Val Error: 0.0062
+Epoch [5/300] - 0.0068/0.0086/0.0068/0.0086
+Best Result: Epoch [4/300] - Val Loss: 0.0062, Val Error: 0.0062
+Epoch [6/300] - 0.0078/0.0055/0.0078/0.0055
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [7/300] - 0.0075/0.0076/0.0075/0.0076
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [8/300] - 0.0094/0.0079/0.0094/0.0079
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [9/300] - 0.0111/0.0075/0.0111/0.0075
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [10/300] - 0.0157/0.0171/0.0157/0.0171
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [11/300] - 0.0098/0.0069/0.0098/0.0069
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [12/300] - 0.0142/0.1052/0.0142/0.1052
+Best Result: Epoch [6/300] - Val Loss: 0.0055, Val Error: 0.0055
+Epoch [13/300] - 0.0115/0.0051/0.0115/0.0051
+Best Result: Epoch [13/300] - Val Loss: 0.0051, Val Error: 0.0051
+Epoch [14/300] - 0.0132/0.0284/0.0132/0.0285
+Best Result: Epoch [13/300] - Val Loss: 0.0051, Val Error: 0.0051
+Epoch [15/300] - 0.0166/0.0182/0.0166/0.0182
+Best Result: Epoch [13/300] - Val Loss: 0.0051, Val Error: 0.0051
+Epoch [16/300] - 0.0175/0.0038/0.0175/0.0038
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [17/300] - 0.0094/0.0042/0.0094/0.0042
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [18/300] - 0.4525/0.0253/0.4527/0.0253
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [19/300] - 0.0081/0.0050/0.0081/0.0050
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [20/300] - 0.0057/0.0054/0.0057/0.0054
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [21/300] - 0.0043/0.0040/0.0043/0.0040
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [22/300] - 0.0040/0.0044/0.0040/0.0044
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [23/300] - 0.0235/0.0190/0.0235/0.0190
+Best Result: Epoch [16/300] - Val Loss: 0.0038, Val Error: 0.0038
+Epoch [24/300] - 0.0040/0.0035/0.0040/0.0035
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [25/300] - 0.0039/0.0085/0.0039/0.0085
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [26/300] - 0.5300/0.0120/0.5303/0.0120
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [27/300] - 0.0089/0.0055/0.0089/0.0055
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [28/300] - 0.0054/0.0047/0.0054/0.0047
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [29/300] - 0.0048/0.0047/0.0048/0.0047
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [30/300] - 0.0044/0.0051/0.0044/0.0051
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [31/300] - 0.0214/0.0046/0.0214/0.0046
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [32/300] - 0.0040/0.0060/0.0040/0.0060
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [33/300] - 0.0344/0.0036/0.0345/0.0036
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [34/300] - 0.0036/0.0037/0.0036/0.0037
+Best Result: Epoch [24/300] - Val Loss: 0.0035, Val Error: 0.0035
+Epoch [35/300] - 0.0038/0.0034/0.0038/0.0034
+Best Result: Epoch [35/300] - Val Loss: 0.0034, Val Error: 0.0034
+Epoch [36/300] - 0.0298/0.0034/0.0298/0.0034
+Best Result: Epoch [36/300] - Val Loss: 0.0034, Val Error: 0.0034
+Epoch [37/300] - 0.0035/0.0034/0.0035/0.0034
+Best Result: Epoch [36/300] - Val Loss: 0.0034, Val Error: 0.0034
+Epoch [38/300] - 0.0435/0.0375/0.0432/0.0375
+Best Result: Epoch [36/300] - Val Loss: 0.0034, Val Error: 0.0034
+Epoch [39/300] - 0.0173/0.0033/0.0173/0.0033
+Best Result: Epoch [39/300] - Val Loss: 0.0033, Val Error: 0.0033
+Epoch [40/300] - 0.0033/0.0032/0.0033/0.0032
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [41/300] - 0.0035/0.0032/0.0035/0.0032
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [42/300] - 0.0576/0.0034/0.0576/0.0034
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [43/300] - 0.0032/0.0035/0.0032/0.0035
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [44/300] - 0.0033/0.0040/0.0033/0.0040
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [45/300] - 0.0763/0.0059/0.0763/0.0059
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [46/300] - 0.0034/0.0033/0.0034/0.0033
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [47/300] - 0.0032/0.0036/0.0032/0.0036
+Best Result: Epoch [40/300] - Val Loss: 0.0032, Val Error: 0.0032
+Epoch [48/300] - 0.0033/0.0031/0.0033/0.0031
+Best Result: Epoch [48/300] - Val Loss: 0.0031, Val Error: 0.0031
+Epoch [49/300] - 0.0819/0.0031/0.0820/0.0031
+Best Result: Epoch [49/300] - Val Loss: 0.0031, Val Error: 0.0031
+Epoch [50/300] - 0.0032/0.0030/0.0032/0.0030
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [51/300] - 0.0142/0.0035/0.0142/0.0035
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [52/300] - 0.0032/0.0032/0.0032/0.0032
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [53/300] - 0.0034/0.0034/0.0034/0.0034
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [54/300] - 0.1148/0.0033/0.1149/0.0033
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [55/300] - 0.0032/0.0033/0.0032/0.0033
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [56/300] - 0.0031/0.0031/0.0031/0.0031
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [57/300] - 0.0032/0.0036/0.0032/0.0036
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [58/300] - 0.0360/0.0033/0.0360/0.0033
+Best Result: Epoch [50/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [59/300] - 0.0032/0.0030/0.0032/0.0030
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [60/300] - 0.0032/0.0032/0.0032/0.0032
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [61/300] - 0.0637/0.0034/0.0638/0.0034
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [62/300] - 0.0032/0.0031/0.0032/0.0031
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [63/300] - 0.0031/0.0031/0.0031/0.0031
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [64/300] - 0.0033/0.0056/0.0033/0.0056
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [65/300] - 0.0245/0.0035/0.0245/0.0035
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [66/300] - 0.0032/0.0033/0.0032/0.0033
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [67/300] - 0.0032/0.0031/0.0032/0.0031
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [68/300] - 0.0220/0.0031/0.0220/0.0031
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [69/300] - 0.0031/0.0031/0.0031/0.0031
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [70/300] - 0.0314/0.0035/0.0315/0.0035
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [71/300] - 0.0031/0.0035/0.0031/0.0035
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [72/300] - 0.0038/0.0035/0.0038/0.0035
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [73/300] - 0.0338/0.0033/0.0338/0.0033
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [74/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [75/300] - 0.0032/0.0038/0.0032/0.0038
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [76/300] - 0.0445/0.0033/0.0445/0.0033
+Best Result: Epoch [59/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [77/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [78/300] - 0.0031/0.0032/0.0031/0.0032
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [79/300] - 0.0425/0.0216/0.0425/0.0216
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [80/300] - 0.0033/0.0032/0.0033/0.0032
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [81/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [82/300] - 0.0032/0.0036/0.0032/0.0036
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [83/300] - 0.0812/0.0038/0.0813/0.0038
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [84/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [85/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [86/300] - 0.0361/0.0036/0.0361/0.0036
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [87/300] - 0.0032/0.0031/0.0032/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [88/300] - 0.0031/0.0032/0.0031/0.0032
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [89/300] - 0.0330/0.0034/0.0330/0.0034
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [90/300] - 0.0030/0.0031/0.0030/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [91/300] - 0.0031/0.0038/0.0031/0.0038
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [92/300] - 0.0234/0.0031/0.0234/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [93/300] - 0.0032/0.0040/0.0032/0.0040
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [94/300] - 0.0532/0.0031/0.0532/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [95/300] - 0.0031/0.0031/0.0031/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [96/300] - 0.0031/0.0031/0.0031/0.0031
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [97/300] - 0.0598/0.0030/0.0598/0.0030
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [98/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [99/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [100/300] - 0.0048/0.0033/0.0048/0.0033
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [101/300] - 0.0469/0.0032/0.0469/0.0032
+Best Result: Epoch [77/300] - Val Loss: 0.0030, Val Error: 0.0030
+Epoch [102/300] - 0.0031/0.0029/0.0031/0.0029
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [103/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [104/300] - 0.0430/0.0034/0.0430/0.0034
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [105/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [106/300] - 0.0030/0.0032/0.0030/0.0032
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [107/300] - 0.0339/0.0033/0.0339/0.0033
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [108/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [109/300] - 0.0031/0.0040/0.0031/0.0040
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [110/300] - 0.0268/0.0042/0.0268/0.0042
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [111/300] - 0.0031/0.0034/0.0031/0.0034
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [112/300] - 0.0033/0.0076/0.0033/0.0076
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [113/300] - 0.0325/0.0030/0.0326/0.0030
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [114/300] - 0.0030/0.0031/0.0030/0.0031
+Best Result: Epoch [102/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [115/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [116/300] - 0.0274/0.0031/0.0274/0.0031
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [117/300] - 0.0030/0.0032/0.0030/0.0032
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [118/300] - 0.0032/0.0036/0.0032/0.0036
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [119/300] - 0.0933/0.0031/0.0933/0.0031
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [120/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [121/300] - 0.0030/0.0032/0.0030/0.0032
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [122/300] - 0.0031/0.0032/0.0031/0.0032
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [123/300] - 0.0520/0.0031/0.0520/0.0031
+Best Result: Epoch [115/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [124/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [124/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [125/300] - 0.0032/0.0035/0.0032/0.0035
+Best Result: Epoch [124/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [126/300] - 0.0334/0.0030/0.0334/0.0030
+Best Result: Epoch [124/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [127/300] - 0.0031/0.0038/0.0031/0.0038
+Best Result: Epoch [124/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [128/300] - 0.0160/0.0029/0.0160/0.0029
+Best Result: Epoch [124/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [129/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [130/300] - 0.0505/0.0030/0.0505/0.0030
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [131/300] - 0.0029/0.0032/0.0029/0.0032
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [132/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [133/300] - 0.0299/0.0104/0.0299/0.0104
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [134/300] - 0.0030/0.0033/0.0030/0.0033
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [135/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [136/300] - 0.0410/0.0366/0.0410/0.0366
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [137/300] - 0.0059/0.0030/0.0059/0.0030
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [138/300] - 0.0030/0.0032/0.0030/0.0032
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [139/300] - 0.0604/0.1617/0.0604/0.1617
+Best Result: Epoch [129/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [140/300] - 0.0048/0.0029/0.0048/0.0029
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [141/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [142/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [143/300] - 0.0039/0.0034/0.0039/0.0034
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [144/300] - 0.0206/0.0037/0.0206/0.0037
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [145/300] - 0.0030/0.0037/0.0030/0.0037
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [146/300] - 0.0256/0.0031/0.0256/0.0031
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [147/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [148/300] - 0.0032/0.0033/0.0032/0.0033
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [149/300] - 0.0472/0.0030/0.0472/0.0030
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [150/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [151/300] - 0.0031/0.0030/0.0031/0.0030
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [152/300] - 0.0754/0.0033/0.0754/0.0033
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [153/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [154/300] - 0.0030/0.0031/0.0030/0.0031
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [155/300] - 0.0031/0.0045/0.0031/0.0045
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [156/300] - 0.0832/0.0036/0.0833/0.0036
+Best Result: Epoch [140/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [157/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [158/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [159/300] - 0.0673/0.3716/0.0670/0.3716
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [160/300] - 0.0162/0.0033/0.0162/0.0033
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [161/300] - 0.0029/0.0035/0.0029/0.0035
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [162/300] - 0.0029/0.0032/0.0029/0.0032
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [163/300] - 0.0285/0.3763/0.0283/0.3763
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [164/300] - 0.0065/0.0029/0.0066/0.0029
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [165/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [166/300] - 0.0373/0.0030/0.0373/0.0030
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [167/300] - 0.0029/0.0032/0.0029/0.0032
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [168/300] - 0.0030/0.0031/0.0030/0.0031
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [169/300] - 0.0967/0.0031/0.0968/0.0031
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [170/300] - 0.0030/0.0033/0.0030/0.0033
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [171/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [172/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [157/300] - Val Loss: 0.0029, Val Error: 0.0029
+Epoch [173/300] - 0.0328/0.0028/0.0329/0.0028
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [174/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [175/300] - 0.0032/0.0053/0.0032/0.0053
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [176/300] - 0.0233/0.0029/0.0233/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [177/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [178/300] - 0.0303/0.0032/0.0303/0.0032
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [179/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [180/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [181/300] - 0.0319/0.0029/0.0319/0.0028
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [182/300] - 0.0029/0.0031/0.0029/0.0031
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [183/300] - 0.0034/0.0034/0.0034/0.0034
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [184/300] - 0.0256/0.0030/0.0256/0.0030
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [185/300] - 0.0030/0.0040/0.0030/0.0040
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [186/300] - 0.0304/0.0029/0.0304/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [187/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [188/300] - 0.0031/0.0029/0.0031/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [189/300] - 0.0463/0.0031/0.0463/0.0031
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [190/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [191/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [192/300] - 0.0434/0.0029/0.0434/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [193/300] - 0.0028/0.0030/0.0028/0.0030
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [194/300] - 0.0248/0.0461/0.0247/0.0461
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [195/300] - 0.0098/0.0029/0.0098/0.0029
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [196/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [197/300] - 0.0163/0.0106/0.0162/0.0106
+Best Result: Epoch [173/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [198/300] - 0.0174/0.0028/0.0174/0.0028
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [199/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [200/300] - 0.0320/0.0030/0.0320/0.0030
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [201/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [202/300] - 0.0029/0.0031/0.0029/0.0031
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [203/300] - 0.0639/0.0029/0.0639/0.0029
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [204/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [205/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [206/300] - 0.0030/0.0031/0.0030/0.0031
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [207/300] - 0.0360/0.0028/0.0360/0.0028
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [208/300] - 0.0028/0.0030/0.0028/0.0030
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [209/300] - 0.0029/0.0053/0.0029/0.0053
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [210/300] - 0.0518/0.0029/0.0519/0.0029
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [211/300] - 0.0028/0.0031/0.0028/0.0031
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [212/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [213/300] - 0.0171/0.0028/0.0171/0.0028
+Best Result: Epoch [198/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [214/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [215/300] - 0.0638/0.0045/0.0639/0.0045
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [216/300] - 0.0031/0.0029/0.0031/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [217/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [218/300] - 0.0030/0.0030/0.0030/0.0030
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [219/300] - 0.0537/0.0029/0.0538/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [220/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [221/300] - 0.0029/0.0051/0.0029/0.0051
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [222/300] - 0.0679/0.0029/0.0679/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [223/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [224/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [225/300] - 0.0030/0.0039/0.0030/0.0039
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [226/300] - 0.0387/0.0028/0.0387/0.0028
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [227/300] - 0.0028/0.0033/0.0028/0.0033
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [228/300] - 0.0030/0.0039/0.0030/0.0039
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [229/300] - 0.0795/0.0029/0.0795/0.0029
+Best Result: Epoch [214/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [230/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [231/300] - 0.0028/0.0030/0.0028/0.0030
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [232/300] - 0.0850/0.0040/0.0851/0.0040
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [233/300] - 0.0031/0.0036/0.0031/0.0036
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [234/300] - 0.0029/0.0036/0.0029/0.0036
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [235/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [236/300] - 0.0729/0.0029/0.0729/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [237/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [238/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [239/300] - 0.0030/0.0029/0.0030/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [240/300] - 0.0338/0.0031/0.0339/0.0031
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [241/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [242/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [243/300] - 0.0665/0.0028/0.0666/0.0028
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [244/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [245/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [246/300] - 0.0734/0.1532/0.0734/0.1532
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [247/300] - 0.0040/0.0036/0.0040/0.0036
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [248/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [249/300] - 0.0029/0.0037/0.0029/0.0037
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [250/300] - 0.0542/0.0038/0.0542/0.0038
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [251/300] - 0.0031/0.0029/0.0031/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [252/300] - 0.0029/0.0035/0.0029/0.0035
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [253/300] - 0.0030/0.0033/0.0030/0.0033
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [254/300] - 0.0478/0.0029/0.0478/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [255/300] - 0.0028/0.0042/0.0028/0.0042
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [256/300] - 0.0029/0.0037/0.0029/0.0037
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [257/300] - 0.0341/0.0030/0.0341/0.0030
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [258/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [259/300] - 0.0029/0.0032/0.0029/0.0032
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [260/300] - 0.0374/0.0028/0.0374/0.0028
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [261/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [262/300] - 0.0030/0.0046/0.0030/0.0046
+Best Result: Epoch [230/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [263/300] - 0.0964/0.0028/0.0964/0.0028
+Best Result: Epoch [263/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [264/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [263/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [265/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [266/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [267/300] - 0.0990/0.0030/0.0990/0.0030
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [268/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [269/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [270/300] - 0.0029/0.0031/0.0029/0.0031
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [271/300] - 0.0561/0.0030/0.0561/0.0030
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [272/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [273/300] - 0.0028/0.0032/0.0028/0.0032
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [274/300] - 0.0029/0.0033/0.0029/0.0033
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [275/300] - 0.0718/0.0028/0.0719/0.0028
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [276/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [277/300] - 0.0029/0.0030/0.0029/0.0030
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [278/300] - 0.0030/0.0028/0.0030/0.0028
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [279/300] - 0.0651/0.0033/0.0651/0.0033
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [280/300] - 0.0029/0.0029/0.0029/0.0029
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [281/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [282/300] - 0.0514/0.0031/0.0514/0.0031
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [283/300] - 0.0028/0.0030/0.0028/0.0030
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [284/300] - 0.0029/0.0032/0.0029/0.0032
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [285/300] - 0.0246/0.0214/0.0246/0.0214
+Best Result: Epoch [265/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [286/300] - 0.0033/0.0028/0.0033/0.0028
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [287/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [288/300] - 0.0644/0.0029/0.0644/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [289/300] - 0.0028/0.0028/0.0028/0.0028
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [290/300] - 0.0029/0.0028/0.0029/0.0028
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [291/300] - 0.1106/0.6026/0.1103/0.6026
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [292/300] - 0.0149/0.0029/0.0149/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [293/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [294/300] - 0.0028/0.0029/0.0028/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [295/300] - 0.0271/0.3299/0.0263/0.3299
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [296/300] - 0.0183/0.0029/0.0183/0.0029
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [297/300] - 0.0028/0.0034/0.0028/0.0034
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [298/300] - 0.0042/0.1594/0.0039/0.1594
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [299/300] - 0.0514/0.0035/0.0514/0.0035
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Epoch [300/300] - 0.0028/0.0031/0.0028/0.0031
+Best Result: Epoch [286/300] - Val Loss: 0.0028, Val Error: 0.0028
+Finished Training
+Average error with expected test values: 0.003118338994681835

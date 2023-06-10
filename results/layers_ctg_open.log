@@ -1,0 +1,288 @@
+Model7(
+  (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv4): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv5): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv6): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv7): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (fc11): Linear(in_features=512, out_features=16, bias=True)
+)
+Starting training for epoch 1
+Training loss for epoch  1: 2.772896
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 1
+Validation loss for epoch  1: 2.772842
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 2
+Training loss for epoch  2: 2.772760
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 2
+Validation loss for epoch  2: 2.772852
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 3
+Training loss for epoch  3: 2.772798
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 3
+Validation loss for epoch  3: 2.772769
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 4
+Training loss for epoch  4: 2.772780
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 4
+Validation loss for epoch  4: 2.772932
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 5
+Training loss for epoch  5: 2.772772
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 5
+Validation loss for epoch  5: 2.773068
+Accuracy of the network on the validation images: 5 %
+Starting training for epoch 6
+Training loss for epoch  6: 2.772773
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 6
+Validation loss for epoch  6: 2.772913
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 7
+Training loss for epoch  7: 2.772803
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 7
+Validation loss for epoch  7: 2.772856
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 8
+Training loss for epoch  8: 2.772810
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 8
+Validation loss for epoch  8: 2.772972
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 9
+Training loss for epoch  9: 2.772778
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 9
+Validation loss for epoch  9: 2.772998
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 10
+Training loss for epoch 10: 2.772791
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 10
+Validation loss for epoch 10: 2.772865
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 11
+Training loss for epoch 11: 2.772810
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 11
+Validation loss for epoch 11: 2.772757
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 12
+Training loss for epoch 12: 2.772784
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 12
+Validation loss for epoch 12: 2.773158
+Accuracy of the network on the validation images: 5 %
+Starting training for epoch 13
+Training loss for epoch 13: 2.772801
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 13
+Validation loss for epoch 13: 2.772890
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 14
+Training loss for epoch 14: 2.772758
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 14
+Validation loss for epoch 14: 2.773007
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 15
+Training loss for epoch 15: 2.772789
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 15
+Validation loss for epoch 15: 2.773180
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 16
+Training loss for epoch 16: 2.772793
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 16
+Validation loss for epoch 16: 2.772669
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 17
+Training loss for epoch 17: 2.772780
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 17
+Validation loss for epoch 17: 2.772898
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 18
+Training loss for epoch 18: 2.772810
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 18
+Validation loss for epoch 18: 2.772795
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 19
+Training loss for epoch 19: 2.772784
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 19
+Validation loss for epoch 19: 2.772763
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 20
+Training loss for epoch 20: 2.772813
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 20
+Validation loss for epoch 20: 2.772846
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 21
+Training loss for epoch 21: 2.772760
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 21
+Validation loss for epoch 21: 2.772836
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 22
+Training loss for epoch 22: 2.772803
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 22
+Validation loss for epoch 22: 2.772782
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 23
+Training loss for epoch 23: 2.772799
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 23
+Validation loss for epoch 23: 2.773051
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 24
+Training loss for epoch 24: 2.772791
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 24
+Validation loss for epoch 24: 2.772763
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 25
+Training loss for epoch 25: 2.772749
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 25
+Validation loss for epoch 25: 2.773116
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 26
+Training loss for epoch 26: 2.772800
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 26
+Validation loss for epoch 26: 2.772681
+Accuracy of the network on the validation images: 5 %
+Starting training for epoch 27
+Training loss for epoch 27: 2.772779
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 27
+Validation loss for epoch 27: 2.772864
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 28
+Training loss for epoch 28: 2.772754
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 28
+Validation loss for epoch 28: 2.772874
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 29
+Training loss for epoch 29: 2.772772
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 29
+Validation loss for epoch 29: 2.772994
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 30
+Training loss for epoch 30: 2.772820
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 30
+Validation loss for epoch 30: 2.772886
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 31
+Training loss for epoch 31: 2.772777
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 31
+Validation loss for epoch 31: 2.772656
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 32
+Training loss for epoch 32: 2.772829
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 32
+Validation loss for epoch 32: 2.772779
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 33
+Training loss for epoch 33: 2.772797
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 33
+Validation loss for epoch 33: 2.772979
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 34
+Training loss for epoch 34: 2.772798
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 34
+Validation loss for epoch 34: 2.772760
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 35
+Training loss for epoch 35: 2.772773
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 35
+Validation loss for epoch 35: 2.772928
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 36
+Training loss for epoch 36: 2.772748
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 36
+Validation loss for epoch 36: 2.772910
+Accuracy of the network on the validation images: 5 %
+Starting training for epoch 37
+Training loss for epoch 37: 2.772795
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 37
+Validation loss for epoch 37: 2.772851
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 38
+Training loss for epoch 38: 2.772817
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 38
+Validation loss for epoch 38: 2.772935
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 39
+Training loss for epoch 39: 2.772741
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 39
+Validation loss for epoch 39: 2.772903
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 40
+Training loss for epoch 40: 2.772770
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 40
+Validation loss for epoch 40: 2.773092
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 41
+Training loss for epoch 41: 2.772778
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 41
+Validation loss for epoch 41: 2.773147
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 42
+Training loss for epoch 42: 2.772769
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 42
+Validation loss for epoch 42: 2.772937
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 43
+Training loss for epoch 43: 2.772755
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 43
+Validation loss for epoch 43: 2.772791
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 44
+Training loss for epoch 44: 2.772755
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 44
+Validation loss for epoch 44: 2.772755
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 45
+Training loss for epoch 45: 2.772828
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 45
+Validation loss for epoch 45: 2.772889
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 46
+Training loss for epoch 46: 2.772751
+Accuracy of the network on the training images: 6 %
+Starting validation for epoch 46
+Validation loss for epoch 46: 2.773181
+Accuracy of the network on the validation images: 6 %
+Starting training for epoch 47

@@ -1,0 +1,107 @@
+Model(
+  (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv4): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv6): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout1): Dropout(p=0.2, inplace=False)
+  (fc1): Linear(in_features=16384, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=1, bias=True)
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+Starting training for epoch 1
+Training loss for epoch  1: 0.080463
+Average error with expected training values: 0.08050345629453659
+Starting validation for epoch 1
+Validation loss for epoch  1: 0.008805
+Average error with expected validation values: 0.008806824684143066
+Best Result: Epoch [1/300] - Val Loss: 0.0088, Val Error: 0.0088
+Starting training for epoch 2
+Training loss for epoch  2: 0.006691
+Average error with expected training values: 0.0066918134689331055
+Starting validation for epoch 2
+Validation loss for epoch  2: 0.004566
+Average error with expected validation values: 0.004566861316561699
+Best Result: Epoch [2/300] - Val Loss: 0.0046, Val Error: 0.0046
+Starting training for epoch 3
+Training loss for epoch  3: 0.006394
+Average error with expected training values: 0.006395265925675631
+Starting validation for epoch 3
+Validation loss for epoch  3: 0.005189
+Average error with expected validation values: 0.005191595293581486
+Best Result: Epoch [2/300] - Val Loss: 0.0046, Val Error: 0.0046
+Starting training for epoch 4
+Training loss for epoch  4: 0.005624
+Average error with expected training values: 0.0056234668008983135
+Starting validation for epoch 4
+Validation loss for epoch  4: 0.004022
+Average error with expected validation values: 0.004022620152682066
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 5
+Training loss for epoch  5: 0.005173
+Average error with expected training values: 0.005173020530492067
+Starting validation for epoch 5
+Validation loss for epoch  5: 0.005051
+Average error with expected validation values: 0.005047097336500883
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 6
+Training loss for epoch  6: 0.005426
+Average error with expected training values: 0.005424377508461475
+Starting validation for epoch 6
+Validation loss for epoch  6: 0.007293
+Average error with expected validation values: 0.007294432260096073
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 7
+Training loss for epoch  7: 0.005333
+Average error with expected training values: 0.005334006622433662
+Starting validation for epoch 7
+Validation loss for epoch  7: 0.009728
+Average error with expected validation values: 0.009731265716254711
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 8
+Training loss for epoch  8: 0.005152
+Average error with expected training values: 0.005152781959623098
+Starting validation for epoch 8
+Validation loss for epoch  8: 0.004092
+Average error with expected validation values: 0.004087039735168219
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 9
+Training loss for epoch  9: 0.005112
+Average error with expected training values: 0.005112592130899429
+Starting validation for epoch 9
+Validation loss for epoch  9: 0.004676
+Average error with expected validation values: 0.004677913151681423
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 10
+Training loss for epoch 10: 0.004818
+Average error with expected training values: 0.004818330053240061
+Starting validation for epoch 10
+Validation loss for epoch 10: 0.004211
+Average error with expected validation values: 0.004210229031741619
+Best Result: Epoch [4/300] - Val Loss: 0.0040, Val Error: 0.0040
+Starting training for epoch 11
+Training loss for epoch 11: 0.004869
+Average error with expected training values: 0.004870373755693436
+Starting validation for epoch 11
+Validation loss for epoch 11: 0.003150
+Average error with expected validation values: 0.0031448991503566504
+Best Result: Epoch [11/300] - Val Loss: 0.0032, Val Error: 0.0031
+Starting training for epoch 12
+Training loss for epoch 12: 0.004478
+Average error with expected training values: 0.0044779484160244465
+Starting validation for epoch 12
+Validation loss for epoch 12: 0.002918
+Average error with expected validation values: 0.002914967481046915
+Best Result: Epoch [12/300] - Val Loss: 0.0029, Val Error: 0.0029
+Starting training for epoch 13
+Training loss for epoch 13: 0.007580
+Average error with expected training values: 0.007578722666949034
+Starting validation for epoch 13
+Validation loss for epoch 13: 0.008401
+Average error with expected validation values: 0.008379857055842876
+Best Result: Epoch [12/300] - Val Loss: 0.0029, Val Error: 0.0029
+Starting training for epoch 14
