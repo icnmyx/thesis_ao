@@ -19,10 +19,10 @@ from datetime import datetime
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 
-savepath="data"
-dir = os.path.join(os.path.dirname(__file__), savepath)
+dir = os.path.join(os.path.dirname(__file__), "data")
+savepath = os.path.join(os.path.dirname(__file__), "results")
 
-f = open(os.path.join(dir, 'experiment_int_test_4.log'),'w')
+f = open(os.path.join(savepath, 'experiment_int_test_5.log'),'w')
 
 # unpack wfs data
 #turbs = [0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
@@ -103,9 +103,9 @@ vl_transform = transforms.Compose([
 
 
 # Parameters
-batch_size = 128
+batch_size = 64
 epochs = 300
-lr = 0.004
+lr = 0.002
 
 
 # Define a training, validation and test sets
@@ -143,8 +143,8 @@ from models import Model, Model2
 #net.to(device)
 
 #nets = [Model2(), Model()]
-nets = [Model(),Model(),Model(),Model()]
-lrs = [0.001, 0.002, 0.004, 0.008]
+nets = [Model(), Model(), Model2(), Model2()]#, Model3()]
+#lrs = [0.001, 0.002, 0.004, 0.008]
 print('loaded models')
 
 save_dir = os.path.join(os.path.dirname(__file__), "checkpoints")
@@ -157,11 +157,14 @@ for net in nets:
     net.to(device)
     print(net, file=f)
     # Define cross-entropy loss function
-    loss_func = nn.L1Loss()
-    #loss_func = nn.MSELoss()
+    if counter % 2 == 1:
+        loss_func = nn.L1Loss()
+    else:
+        loss_func = nn.MSELoss()
 
     # Define Adam optimizer, with 1e-3 learning rate and betas=(0.9, 0.999).
-    optimizer = torch.optim.Adam(net.parameters(), lr=lrs[counter-1], betas=(0.9, 0.999))
+    #optimizer = torch.optim.Adam(net.parameters(), lr=lrs[counter-1], betas=(0.9, 0.999))
+    optimizer = torch.optim.Adam(net.parameters(), lr=lr, betas=(0.9, 0.999))
 
     train_losses = []
     val_losses=[]
@@ -177,7 +180,7 @@ for net in nets:
 
     print('--', file=f)
     print('Experiment Parameters:', file=f)
-    print(f"Closed/Open: {'Closed' if closed else 'Open'} - Batch Size: {batch_size} - Epochs: {epochs} - Learning Rate: {lr}", file=f)
+    print(f"Loss Func: {'L1' if counter % 2 == 1 else 'MSE'} - Closed/Open: {'Closed' if closed else 'Open'} - Batch Size: {batch_size} - Epochs: {epochs} - Learning Rate: {lr}", file=f)
     print('--', file=f)
 
     for epoch in range(epochs):
