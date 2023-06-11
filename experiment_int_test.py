@@ -22,7 +22,7 @@ print(device)
 dir = os.path.join(os.path.dirname(__file__), "data")
 savepath = os.path.join(os.path.dirname(__file__), "results")
 
-f = open(os.path.join(savepath, 'experiment_int_test_5.log'),'w')
+f = open(os.path.join(savepath, 'experiment_int_test_6.log'),'w')
 
 # unpack wfs data
 #turbs = [0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
@@ -137,13 +137,13 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2
+from models import Model, Model2, ModelB
     
 #net = Model() #Model2()
 #net.to(device)
 
 #nets = [Model2(), Model()]
-nets = [Model(), Model(), Model2(), Model2()]#, Model3()]
+nets = [Model(), Model(), ModelB(), ModelB()]#, Model3()]
 #lrs = [0.001, 0.002, 0.004, 0.008]
 print('loaded models')
 
