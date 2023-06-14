@@ -1,3 +1,5 @@
+# Learning Rate
+
 Model(
   (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
   (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -15,7 +17,7 @@ Model(
 )
 --
 Experiment Parameters:
-Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.004
+Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.001
 --
 Epoch [1/300] - 0.3945/0.1441/0.3946/0.1438
 Epoch [2/300] - 0.1376/0.1909/0.1377/0.1911
@@ -426,7 +428,7 @@ Model(
 )
 --
 Experiment Parameters:
-Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.004
+Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.002
 --
 Epoch [1/300] - 0.6401/0.2381/0.6404/0.2379
 Epoch [2/300] - 0.1391/0.0685/0.1392/0.0686
@@ -1248,7 +1250,7 @@ Model(
 )
 --
 Experiment Parameters:
-Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.004
+Closed/Open: Closed - Batch Size: 128 - Epochs: 300 - Learning Rate: 0.008
 --
 Epoch [1/300] - 2.0560/0.0271/2.0571/0.0271
 Epoch [2/300] - 0.0568/0.0337/0.0568/0.0337

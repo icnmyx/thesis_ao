@@ -11,7 +11,7 @@ from collections import deque
 from torch.utils.data import Dataset, DataLoader, TensorDataset
 from torchvision import transforms
 import torch.nn as nn
-from models import Model, Model2
+from models import Model, Model2, ModelA
 from datetime import datetime
 
 """
@@ -45,9 +45,9 @@ classes = set(np.unique(f_label_data))
 print("data loaded")
 
 # Normlisation
-
 X = img_data / (np.max(img_data)*1.1)
-
+y = f_label_data
+'''
 if isCategorical:
   # convert labels to one-hot
   label_encoder = LabelEncoder()
@@ -57,43 +57,19 @@ if isCategorical:
   onehot_encoder = OneHotEncoder(sparse=False)
   onehot_encoded = onehot_encoder.fit_transform(integer_encoded)
   y = onehot_encoded
-
 else: 
   y = f_label_data
+'''
 
-class ImageDataset(Dataset):
-    def __init__(self, lbl, img, transform=None, target_transform=None):
-        self.labels = lbl
-        self.imgs = img
-        self.transform = transform
-        self.target_transform = target_transform
-    def __len__(self):
-        return len(self.labels)
-    
-    def __getitem__(self, idx):
-        image = self.imgs[idx]
-        label = self.labels[idx]
-        if self.transform:
-            image = self.transform(image)
-        if self.target_transform:
-            label = self.target_transform(label)
-        return image, label
-        
-transform = transforms.Compose([transforms.ToTensor()])
-training_set = ImageDataset(
-    lbl = y,
-    img = X,
-    transform = transform,
-    target_transform = transform
-)
-batch_size = 256
-dl = DataLoader(TensorDataset(torch.Tensor(X), torch.Tensor(y)), batch_size=batch_size, shuffle=True)
+batch_size = 64
+dl = DataLoader(TensorDataset(torch.Tensor(X), torch.Tensor(y)), batch_size=batch_size)
 
 # Load Model
 best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0206_1.pth')
 net = Model2()
 net.load_state_dict(torch.load(best_path))
 net.to(device)
+net.eval()
 
 # Eval
 if __name__ == "__main__":
@@ -120,11 +96,12 @@ if __name__ == "__main__":
               total_loss += loss.item()
 
               if isCategorical:
-                 _, predicted = torch.max(outputs.data, 1)
-                 predicted = predicted.cpu().numpy()
+                 _, predicted = torch.max(outputs.data, 1).cpu().numpy()
               else:
                  predicted = outputs.cpu().numpy()
-              
+
+              #print(predicted)
+              #print(labels)
               
               for i in range(len(labels)):
                   label = labels[i].item()
@@ -150,11 +127,35 @@ if __name__ == "__main__":
   
   #print("Variance of Predictions by Label:")
 
+  thresholds = [0.001, 0.002, 0.005, 0.01]
+
   # Visualize the distribution of predictions for each label
   plt.figure(figsize=(10, 6))
   for label, pred in sorted(predictions_by_label.items(), key=lambda item: item[1]):
-    plt.hist(pred, bins=len(classes), alpha=0.5, label=f"{np.round(label,2)}")
+
+    values, bins, _ = plt.hist(pred, bins='auto', alpha=0.5, label=f"{np.round(label,2)}")
     plt.axvline(label, alpha=0.5, color='k', linestyle='dashed', linewidth=1)
+
+    total_values = len(pred)
+
+    print(round(label, 2))
+
+    res = {}
+    for t in thresholds:
+        lower = label - t
+        upper = label + t
+        in_range = np.sum([1 if (p >= lower) & (p <= upper) else 0 for p in pred])
+        perc = (in_range / total_values) * 100
+        #print(f"{perc:.2f}% of predictions within range {t}")
+        if t in res.keys():
+            res[t].append(perc)
+        else:
+            res[t]=[perc]
+
+    print(res)
+    #for i in range(len(percentage_dist)):
+    #    plt.text(bins[i], percentage_dist[i] + 1, f'{percentage_dist[i]:.1f}%', ha='center',va='bottom', fontsize=8)
+    
     #print(f"r0: {np.round(label,2)} - Variance: {torch.var(torch.tensor(pred)).item()}")
 
   plt.xlabel("Predicted Value")

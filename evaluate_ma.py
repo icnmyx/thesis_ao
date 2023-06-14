@@ -7,7 +7,7 @@ from shesha.config import ParamConfig
 from shesha.supervisor.compassSupervisor import CompassSupervisor as Supervisor
 import matplotlib.pyplot as plt
 import random
-from models import Model, Model2
+from models import Model, Model2, ModelA
 import torch
 from collections import deque
 
@@ -29,6 +29,7 @@ best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"),
 net = Model2()
 net.load_state_dict(torch.load(best_path))
 net.to(device)
+net.eval()
 
 if __name__ == "__main__":
 

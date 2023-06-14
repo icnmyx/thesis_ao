@@ -22,7 +22,7 @@ print(device)
 dir = os.path.join(os.path.dirname(__file__), "data")
 savepath = os.path.join(os.path.dirname(__file__), "results")
 
-f = open(os.path.join(savepath, 'experiment_int_test_6.log'),'w')
+f = open(os.path.join(savepath, 'experiment_int_test_7.log'),'w')
 
 # unpack wfs data
 #turbs = [0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
@@ -137,13 +137,13 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2, ModelB
+from models import Model, Model2, ModelB, ModelA
     
 #net = Model() #Model2()
 #net.to(device)
 
 #nets = [Model2(), Model()]
-nets = [Model(), Model(), ModelB(), ModelB()]#, Model3()]
+nets = [ModelA(), Model()]#, Model3()]
 #lrs = [0.001, 0.002, 0.004, 0.008]
 print('loaded models')
 
@@ -157,10 +157,7 @@ for net in nets:
     net.to(device)
     print(net, file=f)
     # Define cross-entropy loss function
-    if counter % 2 == 1:
-        loss_func = nn.L1Loss()
-    else:
-        loss_func = nn.MSELoss()
+    loss_func = nn.L1Loss()
 
     # Define Adam optimizer, with 1e-3 learning rate and betas=(0.9, 0.999).
     #optimizer = torch.optim.Adam(net.parameters(), lr=lrs[counter-1], betas=(0.9, 0.999))
@@ -180,7 +177,7 @@ for net in nets:
 
     print('--', file=f)
     print('Experiment Parameters:', file=f)
-    print(f"Loss Func: {'L1' if counter % 2 == 1 else 'MSE'} - Closed/Open: {'Closed' if closed else 'Open'} - Batch Size: {batch_size} - Epochs: {epochs} - Learning Rate: {lr}", file=f)
+    print(f"Loss Func: L1 - Closed/Open: {'Closed' if closed else 'Open'} - Batch Size: {batch_size} - Epochs: {epochs} - Learning Rate: {lr}", file=f)
     print('--', file=f)
 
     for epoch in range(epochs):
@@ -192,6 +189,7 @@ for net in nets:
         correct, total = 0, 0
         train_error = 0.0
 
+        net.train()
         for i, data in enumerate(train_loader, 0):
             # get the inputs
             inputs, labels = data
@@ -233,6 +231,8 @@ for net in nets:
         validation_loss = 0.0
         correct, total = 0, 0
         val_error = 0.0
+
+        net.eval()
         #print('Starting validation for epoch {}'.format(epoch+1), file=f)
         with torch.no_grad():
             for data in validation_loader:
@@ -287,6 +287,8 @@ for net in nets:
     #best_path = './checkpoints/net_29.pth'
     net.load_state_dict(torch.load(save_f))
     net.to(device)
+
+    net.eval()
 
     # Test the model on test set
     correct, total = 0, 0
