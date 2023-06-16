@@ -25,8 +25,8 @@ param_file = 'scao_sh_16x16_8pix.py'
 
 buffer_size = 10
 
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0206_1.pth')
-net = Model2()
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1506_1.pth')
+net = ModelA()
 net.load_state_dict(torch.load(best_path))
 net.to(device)
 net.eval()
@@ -73,18 +73,33 @@ if __name__ == "__main__":
       print(f"real r0: {r0} - newly predicted r0: {prediction:.4f}")
       print(f"updated moving_average: {ma:.4f} - error: {np.abs(ma - r0):.4f}")
 
-    return ma
+    return ma, prediction
 
   # -- fill buffer
   for _ in range(buffer_size):
-    ma = generate_next()
+    ma, _ = generate_next()
 
   print(f"r0: {r0:.2f} - buffer_size: {buffer_size}")
   print(f"ma_prediction: {ma:.4f} - error: {np.abs(ma - r0):.4f}")
 
+  raw_predictions = []
+  mas = []
+  for i in range(1000):
+    ma, prediction = generate_next()
+    mas.append(ma)
+    raw_predictions.append(prediction)
+
+  print(f'Prediction Average: {np.mean(raw_predictions)} - Variance: {np.var(raw_predictions)}')
+  print(f'MA Average: {np.mean(mas)} - Variance: {np.var(mas)}')
+
+  dir = os.path.join(os.path.dirname(__file__), 'results')
+  save_dir = os.path.join(dir, f'predictions_r{r0}.npz')
+  np.savez(save_dir, *raw_predictions)
+  save_dir = os.path.join(dir, f'ma_r{r0}.npz')
+  np.savez(save_dir, *mas)
   
 
-
+'''
   # -- keep generating and updating
   while True:
     user_input = input("Press enter (or 'exit' to quit): ")
@@ -97,4 +112,12 @@ if __name__ == "__main__":
     ma = generate_next(True)
 
     #print(prediction_buffer)
+'''
 
+#0206
+#Prediction Average: 0.08893897780030965 - Variance: 2.988311700111215e-06
+#MA Average: 0.0889374320447445 - Variance: 1.93469284986792e-06
+
+#1506
+#Prediction Average: 0.1381690441966057 - Variance: 5.2949341331342614e-06
+#MA Average: 0.13817668316215276 - Variance: 4.01600208881944e-06

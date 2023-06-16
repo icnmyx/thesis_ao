@@ -65,8 +65,8 @@ batch_size = 64
 dl = DataLoader(TensorDataset(torch.Tensor(X), torch.Tensor(y)), batch_size=batch_size)
 
 # Load Model
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0206_1.pth')
-net = Model2()
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1506_1.pth')
+net = ModelA()
 net.load_state_dict(torch.load(best_path))
 net.to(device)
 net.eval()
@@ -128,9 +128,10 @@ if __name__ == "__main__":
   #print("Variance of Predictions by Label:")
 
   thresholds = [0.001, 0.002, 0.005, 0.01]
-
+  
   # Visualize the distribution of predictions for each label
   plt.figure(figsize=(10, 6))
+  res = {}
   for label, pred in sorted(predictions_by_label.items(), key=lambda item: item[1]):
 
     values, bins, _ = plt.hist(pred, bins='auto', alpha=0.5, label=f"{np.round(label,2)}")
@@ -138,32 +139,34 @@ if __name__ == "__main__":
 
     total_values = len(pred)
 
-    print(round(label, 2))
+    print(f"r0: {round(label, 2)} - avg: {np.mean(pred)} - var: {np.var(pred)}")
 
-    res = {}
+    
     for t in thresholds:
         lower = label - t
         upper = label + t
         in_range = np.sum([1 if (p >= lower) & (p <= upper) else 0 for p in pred])
         perc = (in_range / total_values) * 100
         #print(f"{perc:.2f}% of predictions within range {t}")
-        if t in res.keys():
-            res[t].append(perc)
+        if str(t) in res:
+          temp = res[str(t)]
+          temp.append(round(perc, 2))
+          res[str(t)] = temp
         else:
-            res[t]=[perc]
+          res[str(t)] = [round(perc, 2)]
 
-    print(res)
     #for i in range(len(percentage_dist)):
     #    plt.text(bins[i], percentage_dist[i] + 1, f'{percentage_dist[i]:.1f}%', ha='center',va='bottom', fontsize=8)
     
     #print(f"r0: {np.round(label,2)} - Variance: {torch.var(torch.tensor(pred)).item()}")
 
+  print(res)
   plt.xlabel("Predicted Value")
   plt.ylabel("Frequency")
   plt.title("Distribution of Predictions by True r0")
   plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
   # Get the current timestamp
-  current_time = datetime.now().strftime("%Y%m%d%H%M%S")
+  current_time = datetime.now().strftime("%Y%m%d%H%M")
 
   # Save the plot as an image with the current time as the file name
   file_name = f"eval_var_{current_time}.png"
@@ -172,5 +175,53 @@ if __name__ == "__main__":
   plt.show()
 
 
+'''
+0206
+Average Loss: 0.002045665226550773
+r0: 0.05 - avg: 0.05043439194560051 - var: 3.5068023862550035e-06
+r0: 0.06 - avg: 0.06001146882772446 - var: 4.130076831643237e-06
+r0: 0.07 - avg: 0.0701899304986 - var: 3.7550942124653375e-06
+r0: 0.08 - avg: 0.07998499274253845 - var: 3.7704151054640533e-06
+r0: 0.09 - avg: 0.09025859087705612 - var: 3.2425195968244225e-06
+r0: 0.1 - avg: 0.10032706707715988 - var: 4.0003137655730825e-06
+r0: 0.11 - avg: 0.11041288077831268 - var: 4.572123089019442e-06
+r0: 0.12 - avg: 0.12044746428728104 - var: 5.35617118657683e-06
+r0: 0.13 - avg: 0.13023741543293 - var: 6.2963986238173675e-06
+r0: 0.14 - avg: 0.14046548306941986 - var: 7.427729087794432e-06
+r0: 0.15 - avg: 0.1504669338464737 - var: 8.831955710775219e-06
+r0: 0.16 - avg: 0.16026423871517181 - var: 1.0302168448106386e-05
+r0: 0.17 - avg: 0.17022451758384705 - var: 1.149717081716517e-05
+r0: 0.18 - avg: 0.1802651733160019 - var: 1.1531071322679054e-05
+r0: 0.19 - avg: 0.1897476315498352 - var: 1.0973627468047198e-05
+r0: 0.2 - avg: 0.1986747533082962 - var: 9.775171747605782e-06
+{'0.001': [39.73, 38.35, 39.90, 40.30, 42.6, 39.68, 35.78, 33.43, 31.94, 28.44, 26.55, 25.37, 22.89, 23.44, 24.15, 24.15],
+ '0.002': [70.17, 67.9, 70.35, 71.27, 73.13, 68.36, 64.34, 61.0, 57.88, 53.22, 50.1, 48.24, 43.96, 44.52, 46.26, 45.64],
+ '0.005': [99.19, 98.42, 98.75, 98.67, 99.4, 98.56, 97.7, 96.7, 95.3, 92.76, 90.19, 87.86, 86.04, 85.54, 87.46, 86.07],
+ '0.01': [100.0, 100.0, 100.0, 99.99, 100.0, 100.0, 100.0, 100.0, 100.0, 99.97, 99.86, 99.72, 99.71, 99.73, 99.58, 99.6]}
+
+1506
+Average Loss: 0.0016999023599317297
+r0: 0.05 - avg: 0.04961829259991646 - var: 1.4405572983378079e-06
+r0: 0.06 - avg: 0.05931463465094566 - var: 2.5903962068696273e-06
+r0: 0.07 - avg: 0.06973534822463989 - var: 2.2733129299012944e-06
+r0: 0.08 - avg: 0.07968365401029587 - var: 2.446368398523191e-06
+r0: 0.09 - avg: 0.09036508947610855 - var: 2.4145151655829977e-06
+r0: 0.1 - avg: 0.10043637454509735 - var: 2.6910679480351973e-06
+r0: 0.11 - avg: 0.10986917465925217 - var: 2.6786367470776895e-06
+r0: 0.12 - avg: 0.11904612183570862 - var: 3.179570740030613e-06
+r0: 0.13 - avg: 0.12874583899974823 - var: 3.7740276184194954e-06
+r0: 0.14 - avg: 0.13885025680065155 - var: 4.445868398761377e-06
+r0: 0.15 - avg: 0.14903776347637177 - var: 5.3434732762980275e-06
+r0: 0.16 - avg: 0.1592549830675125 - var: 6.3222528297046665e-06
+r0: 0.17 - avg: 0.1697094589471817 - var: 7.656590241822414e-06
+r0: 0.18 - avg: 0.1802009493112564 - var: 8.129758498398587e-06
+r0: 0.19 - avg: 0.189994677901268 - var: 7.782503416819964e-06
+r0: 0.2 - avg: 0.19861596822738647 - var: 5.891980435990263e-06
+{'0.001': [56.29, 44.62, 49.07, 49.0, 47.71, 45.47, 46.68, 37.33, 32.39, 31.94, 30.66, 29.25, 27.94, 27.16, 27.76, 29.01],
+ '0.002': [88.95, 75.82, 81.4, 80.3, 79.17, 76.13, 78.44, 67.55, 60.57, 59.18, 57.24, 55.61, 53.12, 51.57, 52.11, 53.81],
+ '0.005': [99.97, 99.19, 99.84, 99.61, 99.75, 99.57, 99.66, 98.79, 97.16, 96.42, 95.53, 94.25, 92.85, 91.94, 92.81, 92.4],
+ '0.01': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 99.99, 99.98, 99.96, 100.0, 99.96, 99.93]}
+
+'''
 
 
