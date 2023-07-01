@@ -23,7 +23,7 @@ r_max = 0.2
 open_loop = False
 param_file = 'scao_sh_16x16_8pix.py'
 
-buffer_size = 10
+buffer_size = 100
 
 best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1506_1.pth')
 net = ModelA()
@@ -114,10 +114,17 @@ if __name__ == "__main__":
     #print(prediction_buffer)
 '''
 
-#0206
+#0206 (10)
 #Prediction Average: 0.08893897780030965 - Variance: 2.988311700111215e-06
 #MA Average: 0.0889374320447445 - Variance: 1.93469284986792e-06
 
-#1506
+#1506 (10)
 #Prediction Average: 0.1381690441966057 - Variance: 5.2949341331342614e-06
 #MA Average: 0.13817668316215276 - Variance: 4.01600208881944e-06
+
+#1506 (100)
+#Prediction Average: 0.12930961626023055 - Variance: 4.162315861173637e-06
+#MA Average: 0.1293447385075688 - Variance: 1.323956198200231e-06
+
+#Prediction Average: 0.11962202878296375 - Variance: 4.544276826758281e-06
+#MA Average: 0.11969999078921974 - Variance: 2.553969552114326e-06

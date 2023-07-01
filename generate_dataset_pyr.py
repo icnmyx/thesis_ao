@@ -23,10 +23,11 @@ r_int = 0.01
 open_loop = False
 turbs = np.arange(r_min, r_max, r_int, dtype=float)
 turbs = [round(x, 2) for x in turbs]
+#turbs = [0.2]
 savepath="data"
 
 #param_file = 'scao_sh_16x16_8pix.py'
-param_file = 'scao_sh_16x16_8pix_noise.py'
+param_file = 'scao_pyrhr_16x16.py'
 
 if __name__ == "__main__":
 
@@ -56,13 +57,30 @@ if __name__ == "__main__":
       sup.loop(100)
 
       wfs_im = sup.wfs.get_wfs_image(0) # -- get and save image
-      wfs_images.append(wfs_im)
+
+      wfs_comp = np.split(wfs_im, 2, axis=0)
+      wfs_comp = np.concatenate([np.split(c, 2, axis=1) for c in wfs_comp])
+
+      '''
+      print(wfs_comp.shape)
+
+      plt.imshow(wfs_im)
+      plt.savefig(f'pyr_0.png')
+
+      counter = 0 
+      for im in wfs_comp:
+        counter += 1
+        plt.imshow(im)
+        plt.savefig(f'pyr_{counter}.png')
+      '''
+
+      wfs_images.append(wfs_comp)
       wfs_labels.append(r0)
 
     data = [wfs_images, wfs_labels]
 
     dir = os.path.join(os.path.dirname(__file__), savepath)
-    save_dir = os.path.join(dir, f'wfs_13_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
+    save_dir = os.path.join(dir, f'pyr_3_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
     
     np.savez(save_dir, *data)
     
