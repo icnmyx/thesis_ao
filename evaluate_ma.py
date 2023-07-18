@@ -35,7 +35,7 @@ net.to(device)
 net.eval()
 
 dir = os.path.join(os.path.dirname(__file__), 'results')
-f = open(os.path.join(dir, f'eval_ma.log'),'w')
+f = open(os.path.join(dir, f'eval_ma_1.log'),'w')
 
 if __name__ == "__main__":
   for r0 in turbs:

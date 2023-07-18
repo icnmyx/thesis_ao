@@ -22,7 +22,7 @@ print(device)
 dir = os.path.join(os.path.dirname(__file__), "data")
 savepath = os.path.join(os.path.dirname(__file__), "results")
 
-f = open(os.path.join(savepath, 'experiment_int_test_11.log'),'w')
+f = open(os.path.join(savepath, 'experiment_int_test_13.log'),'w')
 
 # unpack wfs data
 #turbs = [0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
@@ -33,7 +33,7 @@ seed = 1234
 
 img_data = []
 label_data = []
-
+'''
 if closed:
     codes = ['r0.05_1202', 'r0.06_8449', 'r0.07_5284', 'r0.08_3219', 'r0.09_2483', 'r0.1_9502', 'r0.11_6639', 'r0.12_1687', 'r0.13_8069', 'r0.14_1138', 'r0.15_2556', 'r0.16_1030', 'r0.17_815', 'r0.18_5519', 'r0.19_4963', 'r0.2_6184']
 else:
@@ -47,6 +47,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
+
 '''
 #12 -1
 codes = ['r0.1_7834', 'r0.2_1643', 'r0.05_1958', 'r0.06_6633', 'r0.07_4704', 'r0.08_3648', 'r0.09_4775', 'r0.11_6204', 'r0.12_9936', 'r0.13_1335', 'r0.14_5487', 'r0.15_342', 'r0.16_917', 'r0.17_2617', 'r0.18_9855', 'r0.19_8745']
@@ -55,7 +56,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-
+'''
 #12 0
 codes = ['r0.1_4315', 'r0.2_7389', 'r0.05_5859', 'r0.06_2038', 'r0.07_3557', 'r0.08_4154', 'r0.09_543', 'r0.11_3025', 'r0.12_9259', 'r0.13_8593', 'r0.14_306', 'r0.15_8663', 'r0.16_6721', 'r0.17_5209', 'r0.18_5820', 'r0.19_198']
 for c in codes:
@@ -71,7 +72,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-
+'''
 #10
 codes = ['r0.1_9746', 'r0.2_7532', 'r0.05_6296', 'r0.06_5482', 'r0.07_4990', 'r0.08_350', 'r0.09_1643', 'r0.11_5367', 'r0.12_8109', 'r0.13_5006', 'r0.14_1316', 'r0.15_9154', 'r0.16_556', 'r0.17_5281', 'r0.18_880', 'r0.19_274']
 for c in codes:
@@ -79,7 +80,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-    
+
 #11
 codes = ['r0.1_2822', 'r0.2_6909', 'r0.05_2143', 'r0.06_1809', 'r0.07_3491', 'r0.08_4847', 'r0.09_682', 'r0.11_286', 'r0.12_7566', 'r0.13_9282', 'r0.14_2266', 'r0.15_1016', 'r0.16_7633', 'r0.17_8709', 'r0.18_4488', 'r0.19_185']
 for c in codes:
@@ -87,30 +88,86 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-
+'''
 #13
 codes = ['r0.1_8810', 'r0.2_6928', 'r0.05_6824', 'r0.06_4444', 'r0.07_2229', 'r0.08_513', 'r0.09_6413', 'r0.11_785', 'r0.12_4280', 'r0.13_1983', 'r0.14_2398', 'r0.15_6067', 'r0.16_339', 'r0.17_5196', 'r0.18_9842', 'r0.19_2439']
 for c in codes:
     path = os.path.join(dir, f'wfs_13_closed_{c}_{samples}.npz')
     container = np.load(path)
-    img_data = [*img_data, *container['arr_0'][:3333]]
-    label_data = [*label_data, *container['arr_1'][:3333]]
+    img_data = [*img_data, *container['arr_0'][:2500]]
+    label_data = [*label_data, *container['arr_1'][:2500]]
 
 #14
 codes = ['r0.1_8016', 'r0.2_3966', 'r0.05_6566', 'r0.06_4163', 'r0.07_5665', 'r0.08_2179', 'r0.09_3026', 'r0.11_4586', 'r0.12_9475', 'r0.13_5624', 'r0.14_2336', 'r0.15_9541', 'r0.16_979', 'r0.17_1263', 'r0.18_6431', 'r0.19_7177']
 for c in codes:
     path = os.path.join(dir, f'wfs_14_closed_{c}_{samples}.npz')
     container = np.load(path)
-    img_data = [*img_data, *container['arr_0'][:3333]]
-    label_data = [*label_data, *container['arr_1'][:3333]]
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
 
-#pyr
+#pyr 5
 codes = ['r0.1_9658', 'r0.2_8679', 'r0.05_7587', 'r0.06_4624', 'r0.07_4623', 'r0.08_9073', 'r0.09_2145', 'r0.11_1569', 'r0.12_622', 'r0.13_8310', 'r0.14_964', 'r0.15_6140', 'r0.16_7664', 'r0.17_5502', 'r0.18_5946', 'r0.19_144']
 for c in codes:
-    path = os.path.join(dir, f'pyr_3_closed_{c}_{samples}.npz')
+    path = os.path.join(dir, f'pyr_5_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
+
+#pyr 5
+codes = ['r0.1_9658', 'r0.2_8679', 'r0.05_7587', 'r0.06_4624', 'r0.07_4623', 'r0.08_9073', 'r0.09_2145', 'r0.11_1569', 'r0.12_622', 'r0.13_8310', 'r0.14_964', 'r0.15_6140', 'r0.16_7664', 'r0.17_5502', 'r0.18_5946', 'r0.19_144']
+for c in codes:
+    path = os.path.join(dir, f'pyr_5_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
+
+#pyr 10
+codes = ['r0.1_3859', 'r0.2_4130', 'r0.05_401', 'r0.06_3190', 'r0.07_777', 'r0.08_2920', 'r0.09_3119', 'r0.11_9715', 'r0.12_6117', 'r0.13_8554', 'r0.14_3365', 'r0.15_822', 'r0.16_6390', 'r0.17_6147', 'r0.18_5525', 'r0.19_6506']
+for c in codes:
+    path = os.path.join(dir, f'pyr_10_closed_{c}_{samples}.npz')
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 11
+codes = ['r0.1_1259', 'r0.2_5209', 'r0.05_2633', 'r0.06_2059', 'r0.07_40', 'r0.08_7520', 'r0.09_6861', 'r0.11_6697', 'r0.12_3549', 'r0.13_7812', 'r0.14_7059', 'r0.15_2184', 'r0.16_1872', 'r0.17_4928', 'r0.18_3069', 'r0.19_4766']
+for c in codes:
+    path = os.path.join(dir, f'pyr_11_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 12 0
+codes = ['r0.1_9315', 'r0.2_1310', 'r0.05_48', 'r0.06_3848', 'r0.07_4940', 'r0.08_8877', 'r0.09_7493', 'r0.11_3627', 'r0.12_9903', 'r0.13_6086', 'r0.14_6797', 'r0.15_1468', 'r0.16_6123', 'r0.17_9891', 'r0.18_8333', 'r0.19_62']
+for c in codes:
+    path = os.path.join(dir, f'pyr_12_0_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 12 1
+codes = ['r0.1_6246', 'r0.2_5628', 'r0.05_1781', 'r0.06_2165', 'r0.07_1863', 'r0.08_2668', 'r0.09_9374', 'r0.11_5897', 'r0.12_2765', 'r0.13_5187', 'r0.14_3193', 'r0.15_4266', 'r0.16_6487', 'r0.17_4310', 'r0.18_8205', 'r0.19_608']
+for c in codes:
+    path = os.path.join(dir, f'pyr_12_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 12 -1
+codes = ['r0.1_6476', 'r0.2_8734', 'r0.05_3280', 'r0.06_2696', 'r0.07_3512', 'r0.08_847', 'r0.09_8206', 'r0.11_2609', 'r0.12_2096', 'r0.13_9740', 'r0.14_5703', 'r0.15_5036', 'r0.16_5637', 'r0.17_1756', 'r0.18_6281', 'r0.19_771']
+for c in codes:
+    path = os.path.join(dir, f'pyr_12_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 13
+codes = ['r0.1_7281', 'r0.2_1234', 'r0.05_402', 'r0.06_3625', 'r0.07_1018', 'r0.08_2144', 'r0.09_4921', 'r0.11_3497', 'r0.12_3994', 'r0.13_9065', 'r0.14_4986', 'r0.15_3765', 'r0.16_5642', 'r0.17_5240', 'r0.18_964', 'r0.19_6135']
+for c in codes:
+    path = os.path.join(dir, f'pyr_13_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
 '''
 print(len(img_data))
 
@@ -122,7 +179,7 @@ print("data loaded")
 
 
 # Normlisation
-
+print(np.max(img_data), file=f)
 X = img_data / (np.max(img_data)*1.1)
 y = f_label_data
 
@@ -202,7 +259,7 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2, ModelB, ModelA, ModelA3, ModelA5, ModelA0, ModelC
+from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8
     
 #net = Model() #Model2()
 #net.to(device)
@@ -212,9 +269,12 @@ from models import Model, Model2, ModelB, ModelA, ModelA3, ModelA5, ModelA0, Mod
 #resnet = torchvision.models.resnet18(pretrained=True) # Load net
 #resnet.fc = torch.nn.Linear(in_features=512, out_features=1, bias=True)
 
-#nets = [ModelA0(), ModelA(), ModelA3()]#, Model3()]
-nets = [ModelC()]
-#lrs = [0.001, 0.002, 0.004, 0.008]
+#nets = [ModelA(), ModelA3(), ModelA5()]#, Model3()]ModelA0(), 
+#nets = [ModelA3(), ModelC4(), ModelC8(), ModelC()]
+#nets = [ModelA(), ModelA3(), ModelE(), ModelD()]
+nets = [ModelA3(), ModelE(), ModelD()]
+#nets = [PyrA(), PyrB()]
+#lrs = [0.001, 0.002]#, 0.004, 0.008]
 print('loaded models')
 
 save_dir = os.path.join(os.path.dirname(__file__), "checkpoints")

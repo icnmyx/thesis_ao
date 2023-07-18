@@ -106,10 +106,10 @@ for c in codes:
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
 
-#pyr
+#pyr 5
 codes = ['r0.1_9658', 'r0.2_8679', 'r0.05_7587', 'r0.06_4624', 'r0.07_4623', 'r0.08_9073', 'r0.09_2145', 'r0.11_1569', 'r0.12_622', 'r0.13_8310', 'r0.14_964', 'r0.15_6140', 'r0.16_7664', 'r0.17_5502', 'r0.18_5946', 'r0.19_144']
 for c in codes:
-    path = os.path.join(dir, f'pyr_3_closed_{c}_{samples}.npz')
+    path = os.path.join(dir, f'pyr_5_closed_{c}_{samples}.npz')
     container = np.load(path)
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
@@ -845,7 +845,7 @@ r0: 0.2 - avg: 0.19843094050884247 - var: 1.3880532605980989e-05
 
 
 '''
-pyr_1 (closed) mag3 (/365248.0 *1.1) 202307061436
+pyr_1 (closed) mag5 (/365248.0 *1.1) 202307061436
 Average Loss: 0.0019014019662747159
 r0: 0.05 - avg: 0.04937713220715523 - var: 1.7028536376528791e-06
 r0: 0.06 - avg: 0.06114032492041588 - var: 2.3414002043864457e-06
