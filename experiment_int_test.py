@@ -15,6 +15,7 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 from datetime import datetime
+import time
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
@@ -33,7 +34,7 @@ seed = 1234
 
 img_data = []
 label_data = []
-'''
+
 if closed:
     codes = ['r0.05_1202', 'r0.06_8449', 'r0.07_5284', 'r0.08_3219', 'r0.09_2483', 'r0.1_9502', 'r0.11_6639', 'r0.12_1687', 'r0.13_8069', 'r0.14_1138', 'r0.15_2556', 'r0.16_1030', 'r0.17_815', 'r0.18_5519', 'r0.19_4963', 'r0.2_6184']
 else:
@@ -47,8 +48,15 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
-
 '''
+codes = ['r0.05_8843', 'r0.06_4722', 'r0.07_9303', 'r0.08_90', 'r0.09_8354', 'r0.1_465', 'r0.11_5733', 'r0.12_2390', 'r0.13_2516', 'r0.14_8165', 'r0.15_4511', 'r0.16_753', 'r0.17_2428', 'r0.18_8208', 'r0.19_9645', 'r0.2_9616']
+for c in codes:
+    path = os.path.join(dir, f'wfs_data_open_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
+
+
 #12 -1
 codes = ['r0.1_7834', 'r0.2_1643', 'r0.05_1958', 'r0.06_6633', 'r0.07_4704', 'r0.08_3648', 'r0.09_4775', 'r0.11_6204', 'r0.12_9936', 'r0.13_1335', 'r0.14_5487', 'r0.15_342', 'r0.16_917', 'r0.17_2617', 'r0.18_9855', 'r0.19_8745']
 for c in codes:
@@ -56,7 +64,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-'''
+
 #12 0
 codes = ['r0.1_4315', 'r0.2_7389', 'r0.05_5859', 'r0.06_2038', 'r0.07_3557', 'r0.08_4154', 'r0.09_543', 'r0.11_3025', 'r0.12_9259', 'r0.13_8593', 'r0.14_306', 'r0.15_8663', 'r0.16_6721', 'r0.17_5209', 'r0.18_5820', 'r0.19_198']
 for c in codes:
@@ -72,7 +80,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-'''
+
 #10
 codes = ['r0.1_9746', 'r0.2_7532', 'r0.05_6296', 'r0.06_5482', 'r0.07_4990', 'r0.08_350', 'r0.09_1643', 'r0.11_5367', 'r0.12_8109', 'r0.13_5006', 'r0.14_1316', 'r0.15_9154', 'r0.16_556', 'r0.17_5281', 'r0.18_880', 'r0.19_274']
 for c in codes:
@@ -88,7 +96,7 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
-'''
+
 #13
 codes = ['r0.1_8810', 'r0.2_6928', 'r0.05_6824', 'r0.06_4444', 'r0.07_2229', 'r0.08_513', 'r0.09_6413', 'r0.11_785', 'r0.12_4280', 'r0.13_1983', 'r0.14_2398', 'r0.15_6067', 'r0.16_339', 'r0.17_5196', 'r0.18_9842', 'r0.19_2439']
 for c in codes:
@@ -105,10 +113,10 @@ for c in codes:
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
 
-#pyr 5
-codes = ['r0.1_9658', 'r0.2_8679', 'r0.05_7587', 'r0.06_4624', 'r0.07_4623', 'r0.08_9073', 'r0.09_2145', 'r0.11_1569', 'r0.12_622', 'r0.13_8310', 'r0.14_964', 'r0.15_6140', 'r0.16_7664', 'r0.17_5502', 'r0.18_5946', 'r0.19_144']
+#pyr 3
+codes = ['r0.1_2170', 'r0.2_1204', 'r0.05_9294', 'r0.06_1705', 'r0.07_4322', 'r0.08_8984', 'r0.09_3813', 'r0.11_75', 'r0.12_9972', 'r0.13_990', 'r0.14_7510', 'r0.15_4959', 'r0.16_3071', 'r0.17_5540', 'r0.18_9006', 'r0.19_6217']
 for c in codes:
-    path = os.path.join(dir, f'pyr_5_closed_{c}_{samples}.npz')
+    path = os.path.join(dir, f'pyr_3_closed_{c}_{samples}.npz')
     container = np.load(path)
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
@@ -259,7 +267,7 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8
+from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8, AutoEncoder, AutoEncoder1, ModelAuto, ModelAuto2
     
 #net = Model() #Model2()
 #net.to(device)
@@ -272,9 +280,11 @@ from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, Mod
 #nets = [ModelA(), ModelA3(), ModelA5()]#, Model3()]ModelA0(), 
 #nets = [ModelA3(), ModelC4(), ModelC8(), ModelC()]
 #nets = [ModelA(), ModelA3(), ModelE(), ModelD()]
-nets = [ModelA3(), ModelE(), ModelD()]
+nets = [ModelAuto(), ModelAuto(), ModelAuto2(), ModelAuto2()]
+#nets = [ModelA3(), ModelE(), ModelD()]
 #nets = [PyrA(), PyrB()]
-#lrs = [0.001, 0.002]#, 0.004, 0.008]
+#lrs = [0.001, 0.002, 0.004, 0.008]
+lrs = [0.002, 0.004, 0.002, 0.004]#, 0.004, 0.008]
 print('loaded models')
 
 save_dir = os.path.join(os.path.dirname(__file__), "checkpoints")
@@ -284,10 +294,15 @@ print('started training')
 
 counter = 1
 for net in nets:
+
+    start_time = time.time()
+
     net.to(device)
     print(net, file=f)
     # Define cross-entropy loss function
     loss_func = nn.L1Loss()
+
+    lr = lrs[counter-1]
 
     # Define Adam optimizer, with 1e-3 learning rate and betas=(0.9, 0.999).
     #optimizer = torch.optim.Adam(net.parameters(), lr=lrs[counter-1], betas=(0.9, 0.999))
@@ -303,6 +318,8 @@ for net in nets:
     best_val_loss = float('inf')
     best_avg_error = float('inf')
     best_epoch = 0
+    patience = 5
+    epochs_without_improvement = 0
     save_f = os.path.join(save_dir, 'best_model' + str(counter) + '.pth')
 
     print('--', file=f)
@@ -390,13 +407,17 @@ for net in nets:
             #print(f'Average error with expected validation values: {val_error}', file=f)
             #writer.add_scalar("Error/val", val_error, epoch)
         
-            # Save the best model based on validation loss
-            if validation_loss < best_val_loss:
-                best_val_loss = validation_loss
-                best_avg_error = val_error
-                best_epoch = epoch
-                torch.save(net.state_dict(), save_f)
+        # Save the best model based on validation loss
+        if validation_loss < best_val_loss:
+            best_val_loss = validation_loss
+            best_avg_error = val_error
+            best_epoch = epoch
+            torch.save(net.state_dict(), save_f)
 
+            epochs_without_improvement = 0
+        else:
+            epochs_without_improvement += 1
+            
         #train_error = train_error.detach().numpy()
         train_losses.append(training_loss)
         val_losses.append(validation_loss)
@@ -409,9 +430,18 @@ for net in nets:
             print('--', file=f)
             print(f"Best Result: Epoch [{best_epoch+1}/{epochs}] - "f"Val Loss: {best_val_loss:.4f}, Val Error: {best_avg_error:.4f}", file=f)
             print('--', file=f)
+
+        if epochs_without_improvement >= patience:
+                print(f"Early stopping triggered @ epoch {epoch+1}", file=f)
+                break
     counter += 1
 
     print('Finished Training', file=f)
+
+    # Calculate and print the elapsed time
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Training completed in {elapsed_time:.2f} seconds.", file=f)
 
     # Testing
     #best_path = './checkpoints/net_29.pth'
@@ -478,7 +508,6 @@ for net in nets:
 
     plot_loss(train_losses, val_losses)
     plot_error(train_errors, val_errors)
-
 
 # Set the path to the best model checkpoint
 #best_path = './checkpoints/net_29.pth'
