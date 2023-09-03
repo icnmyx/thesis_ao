@@ -318,8 +318,11 @@ for net in nets:
     best_val_loss = float('inf')
     best_avg_error = float('inf')
     best_epoch = 0
+
+    prev_val_loss = float('inf')
     patience = 5
-    epochs_without_improvement = 0
+    consecutive_val_inc = 0
+
     save_f = os.path.join(save_dir, 'best_model' + str(counter) + '.pth')
 
     print('--', file=f)
@@ -413,10 +416,8 @@ for net in nets:
             best_avg_error = val_error
             best_epoch = epoch
             torch.save(net.state_dict(), save_f)
+        
 
-            epochs_without_improvement = 0
-        else:
-            epochs_without_improvement += 1
             
         #train_error = train_error.detach().numpy()
         train_losses.append(training_loss)
@@ -431,9 +432,16 @@ for net in nets:
             print(f"Best Result: Epoch [{best_epoch+1}/{epochs}] - "f"Val Loss: {best_val_loss:.4f}, Val Error: {best_avg_error:.4f}", file=f)
             print('--', file=f)
 
-        if epochs_without_improvement >= patience:
-                print(f"Early stopping triggered @ epoch {epoch+1}", file=f)
-                break
+        # Execute early stopping
+        if validation_loss < prev_val_loss:
+            consecutive_val_inc = 0
+            prev_val_loss = validation_loss
+        else:
+            consecutive_val_inc += 1
+            if consecutive_val_inc >= patience:
+                    print(f"Early stopping triggered @ epoch {epoch+1}", file=f)
+                    break
+
     counter += 1
 
     print('Finished Training', file=f)
