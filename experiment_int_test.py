@@ -438,6 +438,8 @@ for net in nets:
             prev_val_loss = validation_loss
         else:
             consecutive_val_inc += 1
+            prev_val_loss = validation_loss
+            
             if consecutive_val_inc >= patience:
                     print(f"Early stopping triggered @ epoch {epoch+1}", file=f)
                     break
