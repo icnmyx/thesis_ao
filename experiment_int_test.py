@@ -193,9 +193,9 @@ y = f_label_data
 
 # Training, Validation, and Test Sets
 
-train_ratio = 0.75
-val_ratio = 0.15
-test_ratio = 0.10
+train_ratio = 0.7 #0.75
+val_ratio = 0.2 #0.15
+test_ratio = 0.1
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1-train_ratio, shuffle=True)
 
@@ -233,7 +233,7 @@ vl_transform = transforms.Compose([
 
 
 # Parameters
-batch_size = 64
+batch_size = 64 #64
 epochs = 300
 lr = 0.002
 
@@ -267,7 +267,7 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8, AutoEncoder, AutoEncoder1, ModelAuto, ModelAuto2
+from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8, AutoEncoder, AutoEncoder1, ModelAuto, ModelAuto2, ModelAuto3, ModelAuto1, ModelAuto5, ModelAuto7, ModelAutonb, ModelAuto1nb
     
 #net = Model() #Model2()
 #net.to(device)
@@ -280,11 +280,11 @@ from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, Mod
 #nets = [ModelA(), ModelA3(), ModelA5()]#, Model3()]ModelA0(), 
 #nets = [ModelA3(), ModelC4(), ModelC8(), ModelC()]
 #nets = [ModelA(), ModelA3(), ModelE(), ModelD()]
-nets = [ModelAuto(), ModelAuto(), ModelAuto2(), ModelAuto2()]
+nets = [ModelAuto1(), ModelAuto()]
 #nets = [ModelA3(), ModelE(), ModelD()]
 #nets = [PyrA(), PyrB()]
 #lrs = [0.001, 0.002, 0.004, 0.008]
-lrs = [0.002, 0.004, 0.002, 0.004]#, 0.004, 0.008]
+lrs = [0.002, 0.002]#, 0.004, 0.008]
 print('loaded models')
 
 save_dir = os.path.join(os.path.dirname(__file__), "checkpoints")

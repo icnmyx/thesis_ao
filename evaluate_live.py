@@ -7,7 +7,7 @@ from shesha.config import ParamConfig
 from shesha.supervisor.compassSupervisor import CompassSupervisor as Supervisor
 import matplotlib.pyplot as plt
 import random
-from models import Model, Model2, ModelA, ModelAuto, ModelA3
+from models import Model, Model2, ModelA, ModelAuto, ModelA3, ModelAuto1
 import torch
 from collections import deque
 
@@ -18,12 +18,12 @@ script to test a model against live simulation data.
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 dir = os.path.join(os.path.dirname(__file__), 'results')
-f = open(os.path.join(dir, f'eval_live_1.log'),'w')
+f = open(os.path.join(dir, f'eval_live_a3_30000.log'),'w')
 
 # r0 params
 r_min = 0.05
 r_max = 0.2
-samples = 1000
+samples = 30000
 open_loop = False
 param_file = 'scao_sh_16x16_8pix.py'
 
@@ -37,17 +37,18 @@ var_deviance = []
 abs_errs = []
 
 # Model parameters
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0309_2.pth')
-#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2307_2.pth')
-net = ModelAuto()
-#net = ModelA3()
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0309_2.pth')
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2207_2.pth')
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1009_1.pth')
+
+#net = ModelAuto()
+net = ModelA3()
+#net = ModelAuto1()
 
 net.load_state_dict(torch.load(best_path))
 net.to(device)
 net.eval()
 print(net, file=f)
-rand_seed = random.randint(0,9999)
-print(rand_seed)
 
 if __name__ == "__main__":
   for r0 in turbs:
@@ -88,7 +89,7 @@ if __name__ == "__main__":
 
       wfs_im = torch.tensor(wfs_im).to(device)
       prediction = net(wfs_im).item()
-      sup.loop(1)
+      sup.loop(100)
       
       if verbose: 
         print(f"real r0: {r0} - newly predicted r0: {prediction:.4f} - error: {np.abs(ma - r0):.4f}")
@@ -156,23 +157,9 @@ if __name__ == "__main__":
   ax.set_aspect('auto')
   plt.tight_layout()
 
-  file_name = "eval_live_1.png"
+  file_name = "eval_live_a3_30000.png"
   plt.savefig(file_name)
   plt.show()
 
-    #print([round(i, 2) for i in dist])
-        #print(f"{perc:.2f}% of predictions within range {t}")
-        #if str(t) in res:
-        #  temp = res[str(t)]
-        #  temp.append(round(perc, 2))
-        #  res[str(t)] = temp
-        #else:
-        #  res[str(t)] = [round(perc, 2)]
-
-    #dir = os.path.join(os.path.dirname(__file__), 'results')
-    #save_dir = os.path.join(dir, f'predictions_r{r0}.npz')
-    #np.savez(save_dir, *raw_predictions)
-    #save_dir = os.path.join(dir, f'ma_r{r0}.npz')
-    #np.savez(save_dir, *mas)
   
 
