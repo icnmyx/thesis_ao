@@ -22,27 +22,31 @@ dir = os.path.join(os.path.dirname(__file__), "data")
 container = np.load(os.path.join(dir, f'wfs_data_closed_r0.05_1202_10000.npz'))
 img = container['arr_0'][0]
 img = [img / (1124599.2 * 1.1)]
+#img = [img]
 img = torch.tensor(img).to(device)
 
 # Model parameters
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0309_2.pth')
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0309_2.pth')
 #best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2207_2.pth')
-#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1009_1.pth')
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1009_1.pth')
 
-net = ModelAuto()
+#net = ModelAuto()
 #net = ModelA3()
-#net = ModelAuto1()
+net = ModelAuto1()
 
 net.load_state_dict(torch.load(best_path))
 net.to(device)
 net.eval()
 
+img = torch.randn(1, 128, 128, dtype=torch.float).to(device)
+
 starter, ender = torch.cuda.Event(enable_timing=True), torch.cuda.Event(enable_timing=True)
 reps = 300
 timings=np.zeros((reps,1))
 # warm up gpu
-for _ in range(10):
+for _ in range(300):  
     _ = net(img)
+    img = img.squeeze(0)
 
 # measure inference performance
 for rep in range(reps):
@@ -52,9 +56,14 @@ for rep in range(reps):
 
     # wait for gpu sync
     torch.cuda.synchronize()
-    curr_time = starter.elapsed_time(ender)
+    #Returns the time elapsed in milliseconds after the event was recorded and before the end_event was recorded.
+    curr_time = starter.elapsed_time(ender) 
     timings[rep] = curr_time
+
+    img = img.squeeze(0)
 
 mean_syn = np.sum(timings) / reps
 std_syn = np.std(timings)
-print(mean_syn)
+print(f"mean inference time: {mean_syn:.4f} (ms) - std inference (ms): {std_syn:.4f} (ms)")
+
+#mean inference time: 0.8229 (ms) - std inference (ms): 0.0094 (ms)
