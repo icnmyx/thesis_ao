@@ -25,6 +25,8 @@ turbs = np.arange(r_min, r_max, r_int, dtype=float)
 turbs = [round(x, 2) for x in turbs]
 savepath="data"
 
+seeds = []
+
 #param_file = 'scao_sh_16x16_8pix.py'
 param_file = 'scao_sh_16x16_8pix_noise.py'
 
@@ -62,7 +64,9 @@ if __name__ == "__main__":
     data = [wfs_images, wfs_labels]
 
     dir = os.path.join(os.path.dirname(__file__), savepath)
-    save_dir = os.path.join(dir, f'wfs_13_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
-    
+    save_dir = os.path.join(dir, f'eval_wfs_13_1_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
     np.savez(save_dir, *data)
-    
+
+    seeds.append('r' + str(r0) + '_' + str(config.p_atmos.get_seeds()[0]))
+  
+  print(seeds)

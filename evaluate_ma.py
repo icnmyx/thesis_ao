@@ -7,7 +7,7 @@ from shesha.config import ParamConfig
 from shesha.supervisor.compassSupervisor import CompassSupervisor as Supervisor
 import matplotlib.pyplot as plt
 import random
-from models import Model, Model2, ModelA
+from models import Model, Model2, ModelA, ModelAuto
 import torch
 from collections import deque
 
@@ -28,14 +28,14 @@ turbs = [round(x, 2) for x in turbs]
 
 buffer_size = 100
 
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1506_1.pth')
-net = ModelA()
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), '26_best_model1.pth')
+net = ModelAuto()
 net.load_state_dict(torch.load(best_path))
 net.to(device)
 net.eval()
 
 dir = os.path.join(os.path.dirname(__file__), 'results')
-f = open(os.path.join(dir, f'eval_ma_1.log'),'w')
+f = open(os.path.join(dir, f'eval_ma_26_100.log'),'w')
 
 if __name__ == "__main__":
   for r0 in turbs:
@@ -56,7 +56,6 @@ if __name__ == "__main__":
     if open_loop:
       sup.rtc.open_loop()
 
-
     wfs_images = deque(maxlen=buffer_size) # -- save images and predictions
     prediction_buffer = deque(maxlen=buffer_size)
     moving_average = []
@@ -65,7 +64,7 @@ if __name__ == "__main__":
       wfs_im = sup.wfs.get_wfs_image(0) # -- get and save image
       wfs_images.append(wfs_im)
       #wfs_im = [wfs_im / (max(1124599.2, np.max(wfs_images)) * 1.1)]
-      wfs_im = [wfs_im / (1124599.2 * 1.1)]
+      wfs_im = [wfs_im / (4361.1997 * 1.1)]
       #wfs_im = [wfs_im / (np.max(wfs_im)) * 1.1]
 
       wfs_im = torch.tensor(wfs_im).to(device)
@@ -92,7 +91,7 @@ if __name__ == "__main__":
 
     raw_predictions = []
     mas = []
-    for i in range(1000):
+    for i in range(10000):
       ma, prediction = generate_next()
       mas.append(ma)
       raw_predictions.append(prediction)
@@ -106,7 +105,6 @@ if __name__ == "__main__":
     #np.savez(save_dir, *raw_predictions)
     #save_dir = os.path.join(dir, f'ma_r{r0}.npz')
     #np.savez(save_dir, *mas)
-  
 
 '''
   # -- keep generating and updating

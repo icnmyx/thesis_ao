@@ -26,6 +26,8 @@ turbs = [round(x, 2) for x in turbs]
 #turbs = [0.2]
 savepath="data"
 
+seeds = []
+
 #param_file = 'scao_sh_16x16_8pix.py'
 param_file = 'scao_pyrhr_16x16.py'
 
@@ -80,7 +82,11 @@ if __name__ == "__main__":
     data = [wfs_images, wfs_labels]
 
     dir = os.path.join(os.path.dirname(__file__), savepath)
-    save_dir = os.path.join(dir, f'pyr_3_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
-    
+    save_dir = os.path.join(dir, f'eval_pyr_13_1_closed_r{r0}_{str(config.p_atmos.get_seeds()[0])}_{len(wfs_images)}.npz')
+  
     np.savez(save_dir, *data)
+
+    seeds.append('r' + str(r0) + '_' + str(config.p_atmos.get_seeds()[0]))
+
+print(seeds)
     

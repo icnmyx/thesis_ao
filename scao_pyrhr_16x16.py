@@ -50,10 +50,10 @@ p_wfs0.set_fracsub(0.8)
 p_wfs0.set_xpos(0.)
 p_wfs0.set_ypos(0.)
 p_wfs0.set_Lambda(0.5)
-p_wfs0.set_gsmag(5.)
+p_wfs0.set_gsmag(13.) # ---here 
 p_wfs0.set_optthroughput(0.5)
 p_wfs0.set_zerop(1.e11)
-p_wfs0.set_noise(-1)
+p_wfs0.set_noise(1.) # ---here
 p_wfs0.set_fstop("round")
 p_wfs0.set_pyr_npts(16)
 p_wfs0.set_pyr_ampl(3)

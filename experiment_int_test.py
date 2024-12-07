@@ -23,7 +23,7 @@ print(device)
 dir = os.path.join(os.path.dirname(__file__), "data")
 savepath = os.path.join(os.path.dirname(__file__), "results")
 
-f = open(os.path.join(savepath, 'experiment_int_test_13.log'),'w')
+f = open(os.path.join(savepath, 'experiment_int_test_34.log'),'w')
 
 # unpack wfs data
 #turbs = [0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]
@@ -34,7 +34,7 @@ seed = 1234
 
 img_data = []
 label_data = []
-
+'''
 if closed:
     codes = ['r0.05_1202', 'r0.06_8449', 'r0.07_5284', 'r0.08_3219', 'r0.09_2483', 'r0.1_9502', 'r0.11_6639', 'r0.12_1687', 'r0.13_8069', 'r0.14_1138', 'r0.15_2556', 'r0.16_1030', 'r0.17_815', 'r0.18_5519', 'r0.19_4963', 'r0.2_6184']
 else:
@@ -48,13 +48,21 @@ for c in codes:
     container = np.load(path)
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
-'''
+
+
+codes = ['r0.05_1202', 'r0.06_8449', 'r0.07_5284', 'r0.08_3219', 'r0.09_2483', 'r0.1_9502', 'r0.11_6639', 'r0.12_1687', 'r0.13_8069', 'r0.14_1138', 'r0.15_2556', 'r0.16_1030', 'r0.17_815', 'r0.18_5519', 'r0.19_4963', 'r0.2_6184']
+for c in codes:
+    path = os.path.join(dir, f'wfs_data_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:5000]]
+    label_data = [*label_data, *container['arr_1'][:5000]]
+
 codes = ['r0.05_8843', 'r0.06_4722', 'r0.07_9303', 'r0.08_90', 'r0.09_8354', 'r0.1_465', 'r0.11_5733', 'r0.12_2390', 'r0.13_2516', 'r0.14_8165', 'r0.15_4511', 'r0.16_753', 'r0.17_2428', 'r0.18_8208', 'r0.19_9645', 'r0.2_9616']
 for c in codes:
     path = os.path.join(dir, f'wfs_data_open_{c}_{samples}.npz')
     container = np.load(path)
-    img_data = [*img_data, *container['arr_0']]
-    label_data = [*label_data, *container['arr_1']]
+    img_data = [*img_data, *container['arr_0'][:5000]]
+    label_data = [*label_data, *container['arr_1'][:5000]]
 
 
 #12 -1
@@ -62,8 +70,8 @@ codes = ['r0.1_7834', 'r0.2_1643', 'r0.05_1958', 'r0.06_6633', 'r0.07_4704', 'r0
 for c in codes:
     path = os.path.join(dir, f'wfs_12_closed_{c}_{samples}.npz')
     container = np.load(path)
-    img_data = [*img_data, *container['arr_0'][:3333]]
-    label_data = [*label_data, *container['arr_1'][:3333]]
+    img_data = [*img_data, *container['arr_0'][:3333]] #
+    label_data = [*label_data, *container['arr_1'][:3333]] #
 
 #12 0
 codes = ['r0.1_4315', 'r0.2_7389', 'r0.05_5859', 'r0.06_2038', 'r0.07_3557', 'r0.08_4154', 'r0.09_543', 'r0.11_3025', 'r0.12_9259', 'r0.13_8593', 'r0.14_306', 'r0.15_8663', 'r0.16_6721', 'r0.17_5209', 'r0.18_5820', 'r0.19_198']
@@ -81,6 +89,14 @@ for c in codes:
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
 
+#9
+codes = ['r0.05_1990', 'r0.06_2216', 'r0.07_2596', 'r0.08_3182', 'r0.09_2054', 'r0.1_7976', 'r0.11_2180', 'r0.12_6839', 'r0.13_7830', 'r0.14_8692', 'r0.15_7295', 'r0.16_5579', 'r0.17_214', 'r0.18_9237', 'r0.19_6940', 'r0.2_6119']
+for c in codes:
+    path = os.path.join(dir, f'wfs_9_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]] #
+    label_data = [*label_data, *container['arr_1'][:3333]] #
+
 #10
 codes = ['r0.1_9746', 'r0.2_7532', 'r0.05_6296', 'r0.06_5482', 'r0.07_4990', 'r0.08_350', 'r0.09_1643', 'r0.11_5367', 'r0.12_8109', 'r0.13_5006', 'r0.14_1316', 'r0.15_9154', 'r0.16_556', 'r0.17_5281', 'r0.18_880', 'r0.19_274']
 for c in codes:
@@ -97,10 +113,11 @@ for c in codes:
     img_data = [*img_data, *container['arr_0'][:3333]]
     label_data = [*label_data, *container['arr_1'][:3333]]
 
+
 #13
 codes = ['r0.1_8810', 'r0.2_6928', 'r0.05_6824', 'r0.06_4444', 'r0.07_2229', 'r0.08_513', 'r0.09_6413', 'r0.11_785', 'r0.12_4280', 'r0.13_1983', 'r0.14_2398', 'r0.15_6067', 'r0.16_339', 'r0.17_5196', 'r0.18_9842', 'r0.19_2439']
 for c in codes:
-    path = os.path.join(dir, f'wfs_13_closed_{c}_{samples}.npz')
+    path = os.path.join(dir, f'wfs_13_closed_{c}_{samtmuples}.npz')
     container = np.load(path)
     img_data = [*img_data, *container['arr_0'][:2500]]
     label_data = [*label_data, *container['arr_1'][:2500]]
@@ -113,7 +130,32 @@ for c in codes:
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
 
-#pyr 3
+#9 1
+codes = ['r0.05_8167', 'r0.06_1590', 'r0.07_6350', 'r0.08_9759', 'r0.09_2447', 'r0.1_6830', 'r0.11_8463', 'r0.12_9870', 'r0.13_1125', 'r0.14_6568', 'r0.15_9273', 'r0.16_4258', 'r0.17_645', 'r0.18_813', 'r0.19_8243', 'r0.2_1787']
+for c in codes:
+    path = os.path.join(dir, f'wfs_9_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#10 1
+codes = ['r0.05_4214', 'r0.06_3526', 'r0.07_6125', 'r0.08_4648', 'r0.09_6267', 'r0.1_1979', 'r0.11_6919', 'r0.12_7090', 'r0.13_9909', 'r0.14_2596', 'r0.15_8614', 'r0.16_3630', 'r0.17_5185', 'r0.18_5489', 'r0.19_5242', 'r0.2_4334']
+for c in codes:
+    path = os.path.join(dir, f'wfs_10_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#11 1
+codes = ['r0.05_9484', 'r0.06_3365', 'r0.07_9563', 'r0.08_3779', 'r0.09_318', 'r0.1_1067', 'r0.11_2467', 'r0.12_8265', 'r0.13_9630', 'r0.14_8771', 'r0.15_8972', 'r0.16_1517', 'r0.17_6460', 'r0.18_5229', 'r0.19_6833', 'r0.2_27']
+for c in codes:
+    path = os.path.join(dir, f'wfs_11_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+
+#pyr 3 closed
 codes = ['r0.1_2170', 'r0.2_1204', 'r0.05_9294', 'r0.06_1705', 'r0.07_4322', 'r0.08_8984', 'r0.09_3813', 'r0.11_75', 'r0.12_9972', 'r0.13_990', 'r0.14_7510', 'r0.15_4959', 'r0.16_3071', 'r0.17_5540', 'r0.18_9006', 'r0.19_6217']
 for c in codes:
     path = os.path.join(dir, f'pyr_3_closed_{c}_{samples}.npz')
@@ -121,6 +163,40 @@ for c in codes:
     img_data = [*img_data, *container['arr_0']]
     label_data = [*label_data, *container['arr_1']]
 
+#pyr 3 open
+codes = ['r0.05_1592', 'r0.06_5332', 'r0.07_8321', 'r0.08_3893', 'r0.09_1610', 'r0.1_5958', 'r0.11_8746', 'r0.12_9781', 'r0.13_2476', 'r0.14_2630', 'r0.15_60', 'r0.16_7175', 'r0.17_324', 'r0.18_556', 'r0.19_8102', 'r0.2_8346']
+for c in codes:
+    path = os.path.join(dir, f'pyr_3_open_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0']]
+    label_data = [*label_data, *container['arr_1']]
+
+'''
+#pyr 9 1
+codes = ['r0.05_4282', 'r0.06_8300', 'r0.07_5624', 'r0.08_8018', 'r0.09_4007', 'r0.1_8133', 'r0.11_4618', 'r0.12_4695', 'r0.13_1416', 'r0.14_7885', 'r0.15_5653', 'r0.16_9586', 'r0.17_264', 'r0.18_4332', 'r0.19_7565', 'r0.2_367']
+for c in codes:
+    path = os.path.join(dir, f'pyr_9_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 10 1
+codes = ['r0.05_8070', 'r0.06_1437', 'r0.07_4103', 'r0.08_1694', 'r0.09_4512', 'r0.1_1340', 'r0.11_8552', 'r0.12_1401', 'r0.13_1910', 'r0.14_4888', 'r0.15_5469', 'r0.16_6144', 'r0.17_2166', 'r0.18_3782', 'r0.19_6832', 'r0.2_9781']
+for c in codes:
+    path = os.path.join(dir, f'pyr_10_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+#pyr 11 1
+codes = ['r0.05_2933', 'r0.06_4510', 'r0.07_4185', 'r0.08_4506', 'r0.09_9773', 'r0.1_774', 'r0.11_7774', 'r0.12_9492', 'r0.13_5696', 'r0.14_9253', 'r0.15_5733', 'r0.16_8524', 'r0.17_4876', 'r0.18_7973', 'r0.19_5046', 'r0.2_9886']
+for c in codes:
+    path = os.path.join(dir, f'pyr_11_1_closed_{c}_{samples}.npz')
+    container = np.load(path)
+    img_data = [*img_data, *container['arr_0'][:3333]]
+    label_data = [*label_data, *container['arr_1'][:3333]]
+
+'''
 #pyr 5
 codes = ['r0.1_9658', 'r0.2_8679', 'r0.05_7587', 'r0.06_4624', 'r0.07_4623', 'r0.08_9073', 'r0.09_2145', 'r0.11_1569', 'r0.12_622', 'r0.13_8310', 'r0.14_964', 'r0.15_6140', 'r0.16_7664', 'r0.17_5502', 'r0.18_5946', 'r0.19_144']
 for c in codes:
@@ -189,6 +265,7 @@ print("data loaded")
 # Normlisation
 print(np.max(img_data), file=f)
 X = img_data / (np.max(img_data)*1.1)
+#X = np.array(img_data) / (2383758.0 * 1.1)
 y = f_label_data
 
 # Training, Validation, and Test Sets
@@ -197,9 +274,24 @@ train_ratio = 0.7 #0.75
 val_ratio = 0.2 #0.15
 test_ratio = 0.1
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1-train_ratio, shuffle=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1-train_ratio, shuffle=True, stratify=y)
 
-X_val, X_test, y_val, y_test = train_test_split(X_test, y_test, test_size=test_ratio/(test_ratio + val_ratio), shuffle=True) 
+X_val, X_test, y_val, y_test = train_test_split(X_test, y_test, test_size=test_ratio/(test_ratio + val_ratio), shuffle=True, stratify = y_test) 
+
+'''
+value_counts = {}
+
+# Count the values in the list
+for value in y_train:
+    if value in value_counts:
+        value_counts[value] += 1
+    else:
+        value_counts[value] = 1
+
+# Access the count of each value
+for value, count in value_counts.items():
+    print(f"{value}: {count}")
+'''
 
 print("train-test split done")
 
@@ -233,8 +325,8 @@ vl_transform = transforms.Compose([
 
 
 # Parameters
-batch_size = 64 #64
-epochs = 300
+batch_size = 256 #64
+epochs = 300 #300
 lr = 0.002
 
 
@@ -267,7 +359,7 @@ test_loader = DataLoader(TensorDataset(torch.Tensor(X_test), torch.Tensor(y_test
 
 print("dataloaders done")
 
-from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8, AutoEncoder, AutoEncoder1, ModelAuto, ModelAuto2, ModelAuto3, ModelAuto1, ModelAuto5, ModelAuto7, ModelAutonb, ModelAuto1nb
+from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, ModelA5, ModelA0, ModelC, ModelD, ModelE, PyrA, PyrB, ModelC4, ModelC8, AutoEncoder, AutoEncoder1, ModelAuto, ModelAuto2, ModelAuto3, ModelAuto1, ModelAuto5, ModelAuto7, ModelAutonb, ModelAuto1nb, ModelAutoP, ModelAutoS
     
 #net = Model() #Model2()
 #net.to(device)
@@ -280,11 +372,16 @@ from models import Model, Model2, ModelB, ModelA, ModelA2, ModelA3, ModelA4, Mod
 #nets = [ModelA(), ModelA3(), ModelA5()]#, Model3()]ModelA0(), 
 #nets = [ModelA3(), ModelC4(), ModelC8(), ModelC()]
 #nets = [ModelA(), ModelA3(), ModelE(), ModelD()]
-nets = [ModelAuto1(), ModelAuto()]
+#nets = [ModelAuto(), ModelAuto()]
+#nets = [ModelAutoS(), ModelAutoS(), ModelAutoS()]
+nets = [ModelAutoP(), ModelAutoP(), ModelAutoP()]
+#nets = [ModelA3(), ModelA3(), ModelA3(), ModelA3()]
 #nets = [ModelA3(), ModelE(), ModelD()]
 #nets = [PyrA(), PyrB()]
 #lrs = [0.001, 0.002, 0.004, 0.008]
-lrs = [0.002, 0.002]#, 0.004, 0.008]
+#lrs = [0.002, 0.002]#, 0.004, 0.008]
+lrs = [0.00003, 0.00003, 0.00003]
+#lrs = [0.00005, 0.00005]
 print('loaded models')
 
 save_dir = os.path.join(os.path.dirname(__file__), "checkpoints")
@@ -323,7 +420,7 @@ for net in nets:
     patience = 5
     consecutive_val_inc = 0
 
-    save_f = os.path.join(save_dir, 'best_model' + str(counter) + '.pth')
+    save_f = os.path.join(save_dir, '34_best_model' + str(counter) + '.pth')
 
     print('--', file=f)
     print('Experiment Parameters:', file=f)
@@ -442,7 +539,7 @@ for net in nets:
             
             if consecutive_val_inc >= patience:
                     print(f"Early stopping triggered @ epoch {epoch+1}", file=f)
-                    break
+                    #break
 
     counter += 1
 
@@ -486,6 +583,7 @@ for net in nets:
         plt.title('Training and Validation Loss')
         plt.xlabel('Epochs')
         plt.ylabel('Loss')
+        plt.ylim(0, 0.02)
         plt.legend()
 
         # Get the current timestamp
@@ -506,78 +604,19 @@ for net in nets:
         plt.title('Training and Validation Error')
         plt.xlabel('Epochs')
         plt.ylabel('Loss')
+        plt.ylim(0, 0.02)
         plt.legend()
 
         # Get the current timestamp
         current_time = datetime.now().strftime("%Y%m%d%H%M%S")
 
         # Save the plot as an image with the current time as the file name
-        file_name = f"error_plot_{current_time}.png"
+        file_name = f"34_error_plot_{current_time}.png"
         plt.savefig(file_name)
         plt.show()
 
-    plot_loss(train_losses, val_losses)
+    #plot_loss(train_losses, val_losses)
     plot_error(train_errors, val_errors)
 
-# Set the path to the best model checkpoint
-#best_path = './checkpoints/net_29.pth'
 
-# Load the best model
-#net = Model()
-#net.load_state_dict(torch.load(best_path))
-
-# Evaluate the model on the entire dataset
-#avg_loss, predictions, predictions_by_label = evaluate_model(model, data_loader)
-
-# Measure variance of the predictions
-#variance = torch.var(torch.tensor(predictions)).item()
-
-# Print average loss and variance
-#print("Average Loss:", avg_loss)
-#print("Variance of Predictions:", variance)
-
-# Visualize the distribution of predictions for each label
-# plt.figure(figsize=(10, 6))
-# for label, predictions in predictions_by_label.items():
-#     plt.hist(predictions, bins=20, alpha=0.5, label=f"Label {label}")
-
-# plt.xlabel("Predicted Value")
-# plt.ylabel("Frequency")
-# plt.title("Distribution of Predictions by Label")
-# plt.legend()
-# plt.show()
-
-
-# Function to evaluate the model on the entire dataset
-def evaluate_model(model, data_loader):
-    criterion = nn.MSELoss()
-    #criterion = nn.L1Loss()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = model.to(device)
-    model.eval()
-
-    total_loss = 0.0
-    predictions = []
-    predictions_by_label = {}
-    with torch.no_grad():
-        for images, labels in data_loader:
-            images = images.to(device)
-            labels = labels.to(device)
-
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            total_loss += loss.item()
-
-            predicted = outputs.cpu().numpy()
-            
-            for i in range(len(labels)):
-                label = labels[i].item()
-                if label not in predictions_by_label:
-                    predictions_by_label[label] = []
-                predictions_by_label[label].append(predicted[i])
-
-            predictions.extend(pred)
-
-    avg_loss = total_loss / len(data_loader)
-    return avg_loss, predictions, predictions_by_label
 

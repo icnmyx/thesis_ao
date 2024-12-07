@@ -129,7 +129,7 @@ class ModelA3(nn.Module):
         
         #self.fc1 = nn.Linear(32768, 1)
         self.fc1 = nn.Linear(16384, 1)
-        self.fc2 = nn.Linear(256, 1)
+        #self.fc2 = nn.Linear(256, 1)
 
         self.pool = nn.MaxPool2d(2, stride=2)
 
@@ -1280,7 +1280,7 @@ class ModelAuto1nb(nn.Module):
 class ModelAutonb(nn.Module):
     def __init__(self):
         super().__init__()
-        self.conv1 = nn.Conv2d(1, 16, 3, stride=2, padding=1)
+        self.conv1 = nn.Conv2d(1, 16, 3, stride=1, padding=1)
         self.conv2 = nn.Conv2d(16, 16, 3, stride=1, padding=1)
 
         self.conv3 = nn.Conv2d(16, 32, 3, stride=2, padding=1)
@@ -1292,7 +1292,7 @@ class ModelAutonb(nn.Module):
         self.dropout1=nn.Dropout(0.3)
         
         #self.fc1 = nn.Linear(32768, 1)
-        self.fc2 = nn.Linear(256, 1)
+        self.fc2 = nn.Linear(1024, 1)
 
         self.pool = nn.MaxPool2d(2, stride=2)
 
@@ -1310,6 +1310,106 @@ class ModelAutonb(nn.Module):
         
         x = F.relu(self.conv5(x))
         x = F.relu(self.conv6(x))
+        x = self.pool(x)
+        
+        x = self.dropout1(x)
+        
+        x = x.flatten(start_dim=1, end_dim=-1) # flatten output for linear layer
+
+        x = self.fc2(x)
+        #x = self.fc2(x)
+        return x
+
+
+class ModelAutoP(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = nn.Conv2d(4, 16, 3, stride=1, padding=1)
+        self.conv2 = nn.Conv2d(16, 16, 3, stride=1, padding=1)
+        self.bn11 = nn.BatchNorm2d(16)
+        self.bn12 = nn.BatchNorm2d(16)
+
+        self.conv3 = nn.Conv2d(16, 32, 3, stride=1, padding=1)
+        self.conv4 = nn.Conv2d(32, 32, 3, stride=1, padding=1)
+        self.bn21 = nn.BatchNorm2d(32)
+        self.bn22 = nn.BatchNorm2d(32)
+
+        self.conv5 = nn.Conv2d(32, 64, 3, stride=1, padding=1)
+        self.conv6 = nn.Conv2d(64, 64, 3, stride=1, padding=1)
+        self.bn31 = nn.BatchNorm2d(64)
+        self.bn32 = nn.BatchNorm2d(64)
+
+        self.dropout1=nn.Dropout(0.3)
+        
+        #self.fc1 = nn.Linear(32768, 1)
+        self.fc2 = nn.Linear(1024, 1)
+
+        self.pool = nn.MaxPool2d(2, stride=2)
+
+    def forward(self, x):
+        #x = x.unsqueeze_(0)
+        #x = x.permute(1,0,2,3)
+
+        x = F.relu(self.bn11(self.conv1(x)))
+        x = F.relu(self.bn12(self.conv2(x)))
+        x = self.pool(x)
+        
+        x = F.relu(self.bn21(self.conv3(x)))
+        x = F.relu(self.bn22(self.conv4(x)))
+        x = self.pool(x)
+        
+        x = F.relu(self.bn31(self.conv5(x)))
+        x = F.relu(self.bn32(self.conv6(x)))
+        x = self.pool(x)
+        
+        x = self.dropout1(x)
+        
+        x = x.flatten(start_dim=1, end_dim=-1) # flatten output for linear layer
+
+        x = self.fc2(x)
+        #x = self.fc2(x)
+        return x
+
+
+class ModelAutoS(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 16, 3, stride=1, padding=1)
+        self.conv2 = nn.Conv2d(16, 16, 3, stride=1, padding=1)
+        self.bn11 = nn.BatchNorm2d(16)
+        self.bn12 = nn.BatchNorm2d(16)
+
+        self.conv3 = nn.Conv2d(16, 32, 3, stride=2, padding=1)
+        self.conv4 = nn.Conv2d(32, 32, 3, stride=1, padding=1)
+        self.bn21 = nn.BatchNorm2d(32)
+        self.bn22 = nn.BatchNorm2d(32)
+
+        self.conv5 = nn.Conv2d(32, 64, 3, stride=2, padding=1)
+        self.conv6 = nn.Conv2d(64, 64, 3, stride=1, padding=1)
+        self.bn31 = nn.BatchNorm2d(64)
+        self.bn32 = nn.BatchNorm2d(64)
+
+        self.dropout1=nn.Dropout(0.1)
+        
+        #self.fc1 = nn.Linear(32768, 1)
+        self.fc2 = nn.Linear(1024, 1)
+
+        self.pool = nn.MaxPool2d(2, stride=2)
+
+    def forward(self, x):
+        x = x.unsqueeze_(0)
+        x = x.permute(1,0,2,3)
+
+        x = F.relu(self.bn11(self.conv1(x)))
+        x = F.relu(self.bn12(self.conv2(x)))
+        x = self.pool(x)
+        
+        x = F.relu(self.bn21(self.conv3(x)))
+        x = F.relu(self.bn22(self.conv4(x)))
+        x = self.pool(x)
+        
+        x = F.relu(self.bn31(self.conv5(x)))
+        x = F.relu(self.bn32(self.conv6(x)))
         x = self.pool(x)
         
         x = self.dropout1(x)

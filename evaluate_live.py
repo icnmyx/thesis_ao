@@ -7,24 +7,29 @@ from shesha.config import ParamConfig
 from shesha.supervisor.compassSupervisor import CompassSupervisor as Supervisor
 import matplotlib.pyplot as plt
 import random
-from models import Model, Model2, ModelA, ModelAuto, ModelA3, ModelAuto1
+from models import Model, Model2, ModelA, ModelAuto, ModelA3, ModelAuto1, ModelAutoS
 import torch
 from collections import deque
 
 """
 script to test a model against live simulation data.
 
+
+1. toggle open/closed
+2. select model
+3. change normalisation
+4. change both file names
 """
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 dir = os.path.join(os.path.dirname(__file__), 'results')
-f = open(os.path.join(dir, f'eval_live_a3_30000.log'),'w')
-
+f = open(os.path.join(dir, f'eval_live_2309_1_BENCH_o.log'),'w')
+#"eval_live_2109_3_BENCH_c2o.png"
 # r0 params
 r_min = 0.05
 r_max = 0.2
-samples = 30000
-open_loop = False
+samples = 10000 #10000
+open_loop = True
 param_file = 'scao_sh_16x16_8pix.py'
 
 turbs = np.arange(r_min, r_max, 0.01, dtype=float)
@@ -38,11 +43,18 @@ abs_errs = []
 
 # Model parameters
 #best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_0309_2.pth')
-best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2207_2.pth')
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2207_2.pth')
 #best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1009_1.pth')
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_1909_4.pth')
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2109_3.pth') # bench closed
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2209_2.pth') # bench open
+best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), 'best_model_2309_1.pth') # bench 3co
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), '19_best_model2.pth') # bench 3co half (1162616.9)
+#best_path = os.path.join(os.path.join(os.path.dirname(__file__), "checkpoints"), '17_best_model2.pth') # closed AutoS
 
-#net = ModelAuto()
-net = ModelA3()
+#net = ModelAutoS()
+net = ModelAuto()
+#net = ModelA3()
 #net = ModelAuto1()
 
 net.load_state_dict(torch.load(best_path))
@@ -85,7 +97,8 @@ if __name__ == "__main__":
       # pyr 12 incl noise = 490.0
       # pyr 10-12 = 2726.0142
       # pyr 3 bench = 2099258.8
-      wfs_im = [wfs_im / (1124599.2 * 1.1)]
+      #wfs_im = [wfs_im / (1124599.2 * 1.1)]
+      wfs_im = [wfs_im / (1162616.9 * 1.1)]
 
       wfs_im = torch.tensor(wfs_im).to(device)
       prediction = net(wfs_im).item()
@@ -125,8 +138,23 @@ if __name__ == "__main__":
     res[r0] = [dist]
     
     print(f'r0: {r0} - Mean: {avg_pred} - Variance: {variance} - Distribution: {dist}', file=f)
+    #print(f'dev mean: {np.mean(deviance)} - var: {np.var(deviance)}', file=f)
+  
+  mae = np.mean(abs_errs)
+  mse = np.mean([i ** 2 for i in abs_errs])
 
-  print(f'Mean Absolute Error: {np.mean(abs_errs)}', file=f)
+  ssr = np.sum([(i - mae) ** 2 for i in abs_errs])
+  sst = np.sum([samples * ((turbs - np.mean(turbs)) ** 2) for i in turbs])
+  r2 = 1 - (ssr / sst)
+
+  print(f'Mean Absolute Error: {mae}', file=f)
+  #print(f'Mean Squared Error: {mse}', file=f)
+  print(f'Root Mean Squared Error: {np.sqrt(mse)}', file=f)
+  print(f'r2: {r2}', file=f)
+
+  print(f'dev mean: {avg_deviance}', file=f)
+  print(f'dev var: {var_deviance}', file=f)
+  
 
   # Calculate upper and lower bounds for the error bars (standard deviation)
   stdevs = np.sqrt(var_deviance)
@@ -157,7 +185,8 @@ if __name__ == "__main__":
   ax.set_aspect('auto')
   plt.tight_layout()
 
-  file_name = "eval_live_a3_30000.png"
+  file_name = "eval_live_2309_1_BENCH_o.png"
+
   plt.savefig(file_name)
   plt.show()
 

@@ -1,0 +1,42 @@
+ModelAutoP(
+  (conv1): Conv2d(4, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn11): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv4): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn21): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv6): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn31): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout1): Dropout(p=0.3, inplace=False)
+  (fc2): Linear(in_features=1024, out_features=1, bias=True)
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+r0: 0.05 - Mean: 0.04491319897994399 - Variance: 1.2445915436451393e-05 - Distribution: [6.96, 14.92, 46.06, 93.18]
+r0: 0.06 - Mean: 0.06046128541603685 - Variance: 7.412110742874635e-06 - Distribution: [28.69, 53.65, 92.69, 99.95]
+r0: 0.07 - Mean: 0.0702443710859865 - Variance: 9.83487221692753e-06 - Distribution: [24.74, 47.97, 88.47, 99.82]
+r0: 0.08 - Mean: 0.07996152344346047 - Variance: 1.1493719577644988e-05 - Distribution: [23.35, 44.11, 85.83, 99.68]
+r0: 0.09 - Mean: 0.08972589263096452 - Variance: 1.2600730781738994e-05 - Distribution: [22.39, 41.59, 83.91, 99.45]
+r0: 0.1 - Mean: 0.09976115417331458 - Variance: 1.459445024445907e-05 - Distribution: [20.24, 39.62, 81.12, 98.99]
+r0: 0.11 - Mean: 0.10986206697076559 - Variance: 1.7923081412027047e-05 - Distribution: [18.79, 37.01, 76.03, 98.08]
+r0: 0.12 - Mean: 0.12005031455084682 - Variance: 2.1472726201629637e-05 - Distribution: [16.99, 33.72, 72.56, 96.68]
+r0: 0.13 - Mean: 0.13053384007662536 - Variance: 2.402656532363226e-05 - Distribution: [15.81, 31.25, 69.04, 95.93]
+r0: 0.14 - Mean: 0.14066720904707908 - Variance: 2.7461493753684152e-05 - Distribution: [15.21, 29.44, 65.85, 94.07]
+r0: 0.15 - Mean: 0.15052768546640874 - Variance: 3.0284859589142782e-05 - Distribution: [14.47, 28.78, 63.66, 92.93]
+r0: 0.16 - Mean: 0.1602335789680481 - Variance: 3.505398083932082e-05 - Distribution: [13.54, 26.14, 59.83, 90.91]
+r0: 0.17 - Mean: 0.17097639434933662 - Variance: 3.3894232780977265e-05 - Distribution: [13.79, 26.5, 59.97, 90.57]
+r0: 0.18 - Mean: 0.18017492162585258 - Variance: 3.213550336969838e-05 - Distribution: [13.47, 27.06, 61.58, 92.36]
+r0: 0.19 - Mean: 0.18970362129807472 - Variance: 2.7930261531590823e-05 - Distribution: [14.79, 29.47, 65.72, 94.39]
+r0: 0.2 - Mean: 0.1975413761243224 - Variance: 2.3448977956749246e-05 - Distribution: [14.68, 29.57, 66.51, 93.11]
+Mean Absolute Error: 0.003801099224069156
+Root Mean Squared Error: 0.003906006753092582
+r2: 0.9999999976219605
+dev mean: [-0.005086801020056012, 0.0004612854160368465, 0.00024437108598648834, -3.847655653953719e-05, -0.0002741073690354791, -0.00023884582668543417, -0.0001379330292344099, 5.0314550846819553e-05, 0.0005338400766253427, 0.0006672090470790729, 0.000527685466408735, 0.00023357896804809236, 0.0009763943493366119, 0.00017492162585259151, -0.0002963787019252799, -0.0024586238756775965]
+dev var: [1.2445915436451393e-05, 7.412110742874635e-06, 9.83487221692753e-06, 1.149371957764499e-05, 1.2600730781738994e-05, 1.459445024445907e-05, 1.792308141202705e-05, 2.1472726201629637e-05, 2.402656532363226e-05, 2.7461493753684152e-05, 3.0284859589142782e-05, 3.505398083932081e-05, 3.3894232780977265e-05, 3.213550336969837e-05, 2.7930261531590823e-05, 2.344897795674925e-05]
+
+mae: 0.0038010992240691565
+var: 9.082677623835736e-06
+rmse: 0.004850879604263012
