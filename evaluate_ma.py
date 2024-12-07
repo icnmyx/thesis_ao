@@ -12,7 +12,7 @@ import torch
 from collections import deque
 
 """
-script to test a model against live simulation data.
+script to test a model against live simulation data with moving average.
 
 """
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

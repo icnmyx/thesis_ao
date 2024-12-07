@@ -12,7 +12,7 @@ import torch
 from collections import deque
 
 """
-script to test a model against live simulation data.
+script to test a model against pre-saved simulation data.
 
 
 1. toggle test data
